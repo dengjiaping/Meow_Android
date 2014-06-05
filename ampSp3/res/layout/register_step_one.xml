@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg"
+        >
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_bg"
+            android:id="@+id/back"
+            android:layout_gravity="center_vertical|left"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/titleStyle"
+            android:text="用户名"
+            />        
+    </FrameLayout>
+    
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/login_white_bg"
+        >
+        
+        <TextView 
+            
+            android:layout_marginTop="30dip"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="您的手机号将会作为登录用户名使用"
+            android:textColor="@color/grey"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dip"
+            />
+        
+        
+         <FrameLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dip"
+                >
+                
+                <EditText 
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入手机号"
+                    android:layout_gravity="center_vertical|left"
+                    android:background="@null"
+                    android:id="@+id/phone"
+                    android:inputType="phone"
+                    />
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login_line"
+                    android:layout_gravity="center_horizontal|bottom"
+                    />
+                
+                
+            </FrameLayout>
+            
+         
+         <Button 
+             android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+             android:layout_marginTop="20dip"
+             android:id="@+id/sub"
+             android:background="@drawable/register_btn_bg"
+             android:text="下一步"
+             android:textColor="@color/white"
+             />
+    </LinearLayout>
+</LinearLayout>
+
+ <ProgressBar
+     android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:indeterminateDrawable="@drawable/progressbar"
+         />
+ 
+ 
+ </FrameLayout>

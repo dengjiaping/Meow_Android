@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+     >
+    
+     <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"    
+        android:background="@drawable/top_bg"
+        >
+        
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           style="@style/titleStyle"
+           android:text="我的账户"
+           />
+        
+        
+    </FrameLayout>
+    
+     <LinearLayout 
+         android:layout_marginTop="10dip"
+         android:layout_gravity="center_horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         >
+         
+         <FrameLayout 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="10dip"
+             android:background="@drawable/more_top_bg"
+             android:id="@+id/my_item_lay"
+             >
+             <LinearLayout 
+                 android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 
+                 
+                 >
+                 <TextView 
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:text="我的道具"
+                     />
+                 
+                 <ImageView 
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:id="@+id/red_point"
+                     android:src="@drawable/red_point"
+                     android:layout_marginLeft="5dip"
+                     android:layout_gravity="center_vertical"
+                     android:visibility="gone"
+                     />
+                 
+                 
+             </LinearLayout>
+             
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                android:layout_gravity="center_vertical|right"
+                />
+            
+           <!--  <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="15dip"
+                android:id="@+id/number"
+                /> -->
+             
+             
+         </FrameLayout>
+         
+         <FrameLayout 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="10dip"
+             android:background="@drawable/more_middle_bg"
+             android:id="@+id/account_lay"
+             >
+             <TextView 
+                 android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="资金账户"
+                 />
+             <ImageView 
+                 android:layout_gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                />
+             
+         </FrameLayout>
+         
+         <FrameLayout 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="10dip"
+             android:background="@drawable/more_bottom_bg"
+             android:id="@+id/order_lay"
+             >
+             <TextView 
+                  android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="订单列表"
+                 />
+             <ImageView 
+                 android:layout_gravity="center_vertical|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                />
+             
+         </FrameLayout>
+         
+         
+         
+         
+         
+     </LinearLayout>
+     
+     
+      
+     
+     
+     
+      <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dip"
+         android:orientation="vertical"
+         
+         android:layout_gravity="center_horizontal"
+         >
+         <FrameLayout 
+              android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"
+         		android:background="@drawable/more_top_bg"
+         		android:padding="10dip"
+         		android:id="@+id/feedback_lay"
+             >
+              <TextView 
+                  android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="用户反馈"
+                 />
+             <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                android:layout_gravity="center_vertical|right"
+                />
+             
+             
+             
+             
+         </FrameLayout>
+         
+          <FrameLayout 
+              android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"
+         		android:background="@drawable/more_bottom_bg"
+         		android:padding="10dip"
+         		android:id="@+id/about_lay"
+             >
+              <TextView 
+                  android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="关于金银猫"
+                 />
+             <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                android:layout_gravity="center_vertical|right"
+                />
+             
+             
+             
+             
+         </FrameLayout>
+         
+         
+         <!-- <LinearLayout 
+             android:id="@+id/no_login_lay"
+             android:layout_marginTop="10dip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_gravity="center_horizontal"
+             android:gravity="center_horizontal"
+             >
+             
+             <Button 
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:background="@drawable/more_login_bg"
+                 android:id="@+id/login"
+                 android:text="登录"
+                 android:textColor="@color/white"
+                 />
+             
+             <Button 
+                 android:layout_marginLeft="10dip"
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:background="@drawable/more_register_bg"
+                 android:id="@+id/register"
+                 android:text="注册"
+                 android:textColor="@color/white"
+                 />
+             
+             
+             
+         </LinearLayout>
+         
+         <TextView 
+             android:layout_marginTop="10dip"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="更多功能只在一'登'之遥"
+             android:layout_gravity="center_horizontal"
+             />
+          -->
+         
+     </LinearLayout>
+     
+      <LinearLayout 
+           android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dip"
+         android:orientation="vertical"
+         
+         android:layout_gravity="center_horizontal"
+           android:id="@+id/no_login_lay"
+          
+          >
+          
+          <LinearLayout 
+            
+             android:layout_marginTop="10dip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:layout_gravity="center_horizontal"
+             android:gravity="center_horizontal"
+             >
+             
+             <Button 
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:background="@drawable/more_login_bg"
+                 android:id="@+id/login"
+                 android:text="登录"
+                 android:textColor="@color/white"
+                 />
+             
+             <Button 
+                 android:layout_marginLeft="10dip"
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:background="@drawable/more_register_bg"
+                 android:id="@+id/register"
+                 android:text="注册"
+                 android:textColor="@color/white"
+                 />
+             
+             
+             
+         </LinearLayout>
+         
+         <TextView 
+             android:layout_marginTop="10dip"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:text="更多功能只在一''登''之遥!"
+             android:layout_gravity="center_horizontal"
+             android:textColor="@color/grey"
+             />
+          
+          
+          
+          
+          
+          
+          
+      </LinearLayout>
+      
+      
+      
+      <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dip"
+         android:orientation="vertical"
+         android:id="@+id/login_lay"
+          android:layout_gravity="center_horizontal"
+          android:visibility="gone"
+          
+         >
+        <!-- <FrameLayout 
+              android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"
+         		android:background="@drawable/more_top_bg"
+         		android:padding="10dip"
+             >
+              <TextView 
+                  android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="修改密码"
+                 />
+             <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                android:layout_gravity="center_vertical|right"
+                />
+             
+             
+             
+             
+         </FrameLayout>
+         
+          <FrameLayout 
+              android:layout_width="wrap_content"
+         		android:layout_height="wrap_content"
+         		android:background="@drawable/more_bottom_bg"
+         		android:padding="10dip"
+             >
+              <TextView 
+                  android:layout_gravity="center_vertical|left"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="系统设置"
+                 />
+             <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/navi_arrow"
+                android:layout_gravity="center_vertical|right"
+                />
+             
+             
+             
+             
+         </FrameLayout> -->
+         
+         
+         <Button 
+             android:layout_marginTop="10dip"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:background="@drawable/register_btn_bg"
+             android:text="登出"
+             android:textColor="@color/white"
+             android:id="@+id/login_out"
+             />
+         
+         
+     </LinearLayout>
+      
+      
+     
+
+</LinearLayout>

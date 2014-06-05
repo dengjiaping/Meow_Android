@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item>请选择</item>
+        <item>父亲名字？</item>
+        <item>母亲名字？</item>
+        <item>爱人名字？</item>
+       <item>父亲生日？</item>
+       <item>母亲生日？</item>
+       <item>爱人生日？</item>
+       <item>小学名字？</item>
+       <item>自定义问题</item>
+    </string-array>
+    
+    
+</resources>

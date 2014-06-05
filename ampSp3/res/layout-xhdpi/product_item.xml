@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+     android:background="@drawable/product_item_bg"
+    
+    >
+
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dip"
+     ><!-- android:padding="10dip" -->
+
+    <LinearLayout
+        android:layout_width="87dip"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" ><!-- 87dip -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Yield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/Yield_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textSize="24sp"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/Duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/TotalNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/being"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_marginTop="5dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/SellingStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right" />
+            <FrameLayout 
+                android:layout_marginLeft="5dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/progress_product_bg"
+                android:id="@+id/product_progressbar_lay"
+                >
+                <ProgressBar
+                    android:layout_gravity="center_vertical|center_horizontal"
+             android:id="@+id/product_progressbar"
+            android:layout_width="129dip"
+            android:layout_height="1dip"
+             android:background="@drawable/product_grey_prss_bg"
+             android:indeterminate="false"
+             android:indeterminateOnly="false"
+             android:progressDrawable="@drawable/progress_horizontal" />
+                
+            </FrameLayout>
+            
+            
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="5dip"
+            android:textSize="14sp"
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:layout_marginTop="5dip"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无条件承兑行"
+            android:id="@+id/bank_txt"
+            android:textColor="@color/grey" />
+
+        <TextView
+            android:layout_marginTop="5dip"
+            android:textSize="14sp"
+            android:id="@+id/BankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+</FrameLayout>

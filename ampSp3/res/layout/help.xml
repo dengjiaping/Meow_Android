@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" 
+    
+    >
+     <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bg" >
+
+        <Button
+            android:id="@+id/back"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:background="@drawable/back_bg" />
+
+        <TextView
+            style="@style/titleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如何购买" />
+     </FrameLayout>
+     
+     <LinearLayout 
+         
+         android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:layout_gravity="center_vertical|center_horizontal"
+         android:orientation="vertical"
+         >
+         <ImageView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/cat_icon"
+              android:layout_gravity="center_horizontal"
+             />
+         
+         <TextView 
+             android:layout_marginTop="10dip"
+             android:text="喵喵正在全力开发手机支付功能!"
+              android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:textColor="@color/black"
+             />
+         
+         <TextView 
+             android:layout_marginTop="10dip"
+             android:text="请大家暂时使用电脑购买 T_T"
+              android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             />
+         
+         <TextView 
+             android:layout_marginTop="5dip"
+             android:text="百度搜索''金银猫'' 或转到jinyinmao.com.cn"
+              android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/zi_grey"
+             />
+         
+         
+     </LinearLayout>
+     
+     
+    
+     <LinearLayout 
+          android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:layout_gravity="bottom|center_horizontal"
+         android:layout_marginBottom="15dip"
+         android:orientation="vertical"
+         >
+         
+         <TextView 
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="喵喵提示:"
+             android:textColor="@color/zi_grey"
+             android:textSize="15sp"
+             />
+         <TextView 
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="请使用安全的网络环境,并保护好自己的账户与密码"
+             android:textColor="@color/zi_grey"
+              android:textSize="15sp"
+             />
+         
+         
+     </LinearLayout>
+     
+     
+    
+    
+</FrameLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/year_lay"
+        >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/timeline_year_bg"
+        
+        >
+        
+        <FrameLayout 
+             android:layout_height="wrap_content"
+            android:layout_width="64dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+            >
+        <TextView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/year"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_vertical|center_horizontal"
+            />
+        </FrameLayout>
+        
+        <ImageView 
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:src="@drawable/timeline_year_vertical_line"
+            />        
+    </LinearLayout>
+    
+ 	<ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/timeline_line"
+        android:layout_gravity="top|center_horizontal"
+        />    
+    
+    </FrameLayout>
+    
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/timeline_month_bg"
+         android:id="@+id/month_lay"
+        >
+    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            ><!-- 64dip -->
+            <LinearLayout 
+                android:layout_marginTop="10dip"
+                android:layout_width="64dip"
+            	android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:id="@+id/day_lay"
+                >
+                <TextView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/month"
+                    android:textSize="12sp"
+                    />
+                 <TextView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/day"
+                    android:textSize="27sp"
+                    />
+                 
+                 <TextView 
+                     android:id="@+id/today_txt"
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:background="@drawable/today_icon"
+                     android:text="今天"
+                     android:textColor="@color/white"
+                     android:gravity="center_vertical|center_horizontal"
+                     />
+                
+                
+            </LinearLayout>    
+            
+            
+            
+            
+        </LinearLayout>
+        
+         <ImageView 
+            android:layout_height="fill_parent"
+            android:layout_width="wrap_content"
+            android:src="@drawable/timeline_month_vertical_line"
+            android:layout_marginLeft="64dip"
+            android:layout_gravity="top|left"
+            />
+         
+         <ImageView 
+             android:layout_gravity="top|left"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="48dip"
+             android:layout_marginTop="7dip"
+             android:src="@drawable/type_0_icon"
+             android:id="@+id/type_icon"
+             />
+         
+         <LinearLayout             
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"   
+               android:layout_marginLeft="90dip"
+                ><!-- android:layout_marginRight="10dip"android:layout_gravity="center_vertical|right"  -->
+            
+             <FrameLayout 
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:background="@drawable/timeline_content_top_bg"
+                 >
+                  <TextView 
+                 android:layout_marginLeft="15dip"
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:id="@+id/name"
+                 android:textSize="12sp"
+                 android:layout_gravity="center_vertical"
+                 />
+                 
+                 
+                 
+             </FrameLayout>
+            
+            <FrameLayout 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="7dip"
+                android:background="@drawable/timeline_content_bottom_bg"
+                >
+                <LinearLayout 
+                    android:layout_marginLeft="15dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    >                    
+                    <TextView 
+                         android:textSize="14sp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/txt_1"                        
+                        />
+                    <TextView 
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"
+                        android:layout_marginTop="5dip"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/txt_2"
+                        />
+                </LinearLayout>
+                
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/navi_arrow"
+                    android:id="@+id/navi_arrow"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="5dip"
+                    />
+                
+                 <ImageView 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/timeline_blue_line"
+                    android:id="@+id/timeline_color_line"
+                    />
+                
+                
+            </FrameLayout>
+             
+             
+                
+            </LinearLayout>
+         
+      
+    </FrameLayout>
+    
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finall_lay"
+        android:visibility="gone"
+        >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="喵的征途是星辰大海"
+            android:id="@+id/type_40_txt"
+            android:drawableLeft="@drawable/type_40_icon"
+            android:drawablePadding="10dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            />
+        
+         <ImageView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/timeline_year_vertical_line"
+            android:layout_marginLeft="64dip"
+            android:layout_gravity="top|left"
+            />
+        
+    </FrameLayout>
+
+</LinearLayout>

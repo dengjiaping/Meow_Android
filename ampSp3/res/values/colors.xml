@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- <color name="content_black">#161616</color>
+    <color name="more_black">#898989</color>
+    <color name="white">#fefefe</color>
+    <color name="white_for_hint">#949494</color>
+    <color name="grey">#a09f9f</color>
+    <color name="white_1">#C3D4DA</color>
+    <color name="white_2">#bababa</color>
+    <color name="white_3">#ccf0ff</color>
+    <color name="message_white">#f0f0f0</color>
+    <color name="transparent">#00000000</color>
+   
+    <color name="font_black">#595757</color>
+    <color name="carsfan_item_follower">#2E3234</color>
+    <color name="carsfan_item_following">#1C1F20</color>
+    <color name="dialog_bg">#88000000</color>
+    <color name="post_edit_bg">#EAEAEA</color>
+    <color name="translucent_background">#E0000000</color>
+    <color name="red">#FF0000</color>
+	<color name="zi_grey">#333333</color>
+	<color name="black">#474747</color>
+	<color name="green">#2e8d00</color>
+	<color name="orange">#f07109</color> -->
+	<color name="transparent">#00000000</color>
+	 <color name="blue">#44b5df</color>
+	 <color name="white">#fefefe</color>
+	<color name="background_bg">#f8e8d6</color>
+	
+	<color name="orange_1">#ee6025</color>
+	<color name="yellow">#ecaf09</color>
+	<color name="black">#373538</color>
+	<color name="green">#2ab947</color>
+	<color name="menu_bg">#424242</color>
+	
+	<color name="grey_1">#dacfbe</color>
+	<color name="production_name">#333333</color>
+	<color name="bg_color">#f1f0e5</color>
+	
+	<color name="point_red">#ee6025</color>
+	<color name="point_grey">#a4a4a4</color>
+	
+	<color name="zi_grey">#c6c6cc</color>
+	<color name="grey">#83817c</color>
+	<color name="grey_dip">#b8b2a9</color>
+	
+	
+	
+	<color name="red">#e74c3c</color>
+	<color name="black">#4e4e4e</color>
+	<color name="green">#47b28b</color>
+	
+	<color name="circle_grey">#f4f6f6</color>
+	
+	<color name="top_yellow">#ffffbb33</color>
+	<color name="first_banner_bg">#f1f1e5</color>
+	
+</resources>

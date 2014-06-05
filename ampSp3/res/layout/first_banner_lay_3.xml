@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/first_banner_bg"
+    >
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="100dip"
+        >
+        
+        <ImageView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/first_3_icon"
+            android:layout_gravity="center_horizontal"
+            />
+        
+        <TextView 
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="记录您的投资足迹"
+            android:textColor="@color/yellow"
+            android:textSize="18sp"
+            />
+        
+         <TextView 
+             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="订单、结息、在投，一屏打尽"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            />
+         
+         
+         <Button 
+              android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+             android:layout_marginTop="30dip"
+             android:background="@drawable/first_banner_btn_bg"
+             android:id="@+id/begin"
+             android:text="开始理财"
+             android:textColor="@color/white"
+             />
+        
+        
+        
+        
+    </LinearLayout>
+    
+    
+
+</FrameLayout>

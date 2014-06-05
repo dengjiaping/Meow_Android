@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    
+    >
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        
+        >
+        
+        <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:background="@drawable/top_bg"
+        >
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_bg"
+            android:id="@+id/back"
+            android:layout_gravity="center_vertical|left"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/titleStyle"
+            android:text="设置密码"
+            />
+        
+    </FrameLayout>
+    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_white_bg"
+            android:orientation="vertical"
+            >
+            
+             <FrameLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dip"
+                >
+                
+                <EditText 
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入密码"
+                    android:layout_gravity="center_vertical|left"
+                    android:background="@null"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                     android:singleLine="true"
+                    />
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login_line"
+                    android:layout_gravity="center_horizontal|bottom"
+                    />
+                
+                
+            </FrameLayout>
+            
+             <FrameLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                >
+                
+                <EditText 
+                    android:layout_width="200dip"
+                    android:layout_height="wrap_content"
+                    android:hint="请确认密码"
+                    android:layout_gravity="center_vertical|left"
+                    android:background="@null"
+                    android:id="@+id/comfirm_password"
+                    android:inputType="textPassword"
+                     android:singleLine="true"
+                    />
+                <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login_line"
+                    android:layout_gravity="center_horizontal|bottom"
+                    />
+                
+                
+            </FrameLayout>
+            
+              <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sub"
+            android:text="同意协议并注册"
+            android:layout_marginTop="15dip"
+            android:textColor="@color/white"
+			android:background="@drawable/login_btn_bg"
+            android:layout_gravity="center_horizontal"
+            />
+            
+            
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_marginTop="5dip"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textColor="@color/zi_grey"
+            android:id="@+id/txt"
+            android:padding="5dip"
+            android:lines="2"
+            />
+    </LinearLayout>
+    
+    <ProgressBar
+     android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:indeterminateDrawable="@drawable/progressbar"
+         />
+    
+</FrameLayout>
