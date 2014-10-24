@@ -56,6 +56,7 @@ public class LaunchActivity extends Activity implements IHttpCallback,
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		if (MyApplication.appContext.dm.widthPixels == 320
+				
 				&& MyApplication.appContext.dm.widthPixels == 480) {
 			showImageAnime(R.drawable.opening_320_480);
 		} else if (MyApplication.appContext.dm.widthPixels == 480
@@ -102,7 +103,7 @@ public class LaunchActivity extends Activity implements IHttpCallback,
 	private void getData() {
 		IHttpTask task = HttpTaskFactory.getFactory().createTask(
 				HttpTaskFactory.CHECK_MOBILE_VERSION);
-		task.setParams(new String[] { HttpConfig.SOURCE, HttpConfig.VERSION});
+		task.setParams(new String[] { "jymstore", "android","5.0"});
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 

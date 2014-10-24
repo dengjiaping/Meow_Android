@@ -15,7 +15,7 @@ public class CheckMobileVersionTask implements IHttpTask{
 	@Override
 	public String getSubUrl() {
 		// TODO Auto-generated method stub
-		return "Api/V1/App/Upgrade";
+		return "Api/V1/app/upgradeex";
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class CheckMobileVersionTask implements IHttpTask{
 	@Override
 	public String getParams() {
 		// TODO Auto-generated method stub
-		return String.format("source=%s&v=%s",strs[0],strs[1]);
+		return String.format("channel=%s&source=%s&v=%s",strs[0],strs[1],strs[2]);
 	}
 
 	@Override
@@ -49,8 +49,8 @@ public class CheckMobileVersionTask implements IHttpTask{
 		//info.client_type = Util.getJsonString(obj, "client_type");
 		info.status = Util.getJsonString(obj, "status");
 		info.url = Util.getJsonString(obj, "url");
-		info.version = Util.getJsonString(obj, "version");
-		info.info = Util.getJsonString(obj, "info");	
+//		info.version = Util.getJsonString(obj, "version");
+//		info.info = Util.getJsonString(obj, "info");	
 		info.message = Util.getJsonString(obj, "message");
 		return info;
 	}

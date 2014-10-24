@@ -82,7 +82,6 @@ public class UpdateAct extends BaseActivity {
 	
 	private void go_on(){
 		Intent intent = getIntent();
-		String updInfo = intent.getStringExtra(IntentExtras.UPD_INFO);
 		optional = intent.getBooleanExtra("optional", true);
 		url = intent.getStringExtra("url");
 		msg = intent.getStringExtra("msg");

@@ -406,7 +406,10 @@ public class HomeFragment extends Fragment implements IHttpCallback, SwipeRefres
 			progressbar.setVisibility(View.GONE);
 			if(msg.what == 1){
 				swipeRefreshLayout.setVisibility(View.VISIBLE);			
-				info = (TopInfo) msg.obj;				
+				info = (TopInfo) msg.obj;		
+				if(info==null){
+					return;
+				}
 				initView();				
 			}else if(msg.what < 0){
 				

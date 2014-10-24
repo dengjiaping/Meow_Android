@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import com.umeng.common.net.o;
 import com.widen.application.MyApplication;
 import com.widen.http.IHttpTask;
 import com.widen.http.info.BaseListInfo;
