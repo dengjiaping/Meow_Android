@@ -1,475 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
-    >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" 
-    >
-     <FrameLayout
+    android:background="@color/bg_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/top_bg" >
+
             <ImageView
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:src="@drawable/logo_icon"
+                android:layout_width="102dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/empty"
+                android:src="@drawable/logo_icon" />
+
+            <TextView
+                android:id="@+id/login"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/default_white"
+                android:textSize="16sp" />
         </FrameLayout>
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/swipeRefreshLayout"
-        android:visibility="gone"
-        >
-        <ScrollView 
-             android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
-            android:fillViewport="true"
-            android:layout_weight="1"
-            >
-            <LinearLayout 
-                  android:layout_width="match_parent"
-        		  android:layout_height="fill_parent"
-                  android:orientation="vertical"
-                >
-            <LinearLayout           
-                 android:layout_width="fill_parent"
-        		android:layout_height="wrap_content"
-                android:orientation="vertical"          
-                >
-                
-                <FrameLayout 
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/navi_bg"
-                    >
-                    <LinearLayout 
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/no_login_lay"
-                        >
-                       
-                        
-                        
-                        <Button 
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:background="@drawable/home_login_bg"
-                            android:text="登录"
-                            android:textColor="@color/white"
-                            android:id="@+id/login"
-                            />
-                        
-                        <Button 
-                            android:layout_marginLeft="10dip"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:background="@drawable/home_register_bg"
-                             android:text="免费注册"
-                            android:textColor="@color/white"
-                            android:id="@+id/register"
-                            />
-                        
-                        
-                    </LinearLayout>
-                    
-                    <FrameLayout 
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:id="@+id/logined_lay"
-                        >
-                        
-                        <LinearLayout 
-                            android:layout_gravity="center_vertical|left"
-                            android:layout_marginLeft="10dip"
-                            android:layout_width="wrap_content"
-                        	android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center_vertical"
-                            >
-                            <LinearLayout 
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                >
-                                <TextView 
-                                     android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                    android:id="@+id/txt_1"
-                                    />
-                                
-                                <TextView 
-                                     android:layout_width="wrap_content"
-                                	android:layout_height="wrap_content"
-                                    android:id="@+id/txt_2"
-                                    android:textColor="@color/red"
-                                  
-                                    />
-                                
-                                 <TextView 
-                                     android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                    android:id="@+id/txt_3"
-                                    />
-                                
-                                
-                            </LinearLayout>
-                            
-                            <LinearLayout 
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                 android:layout_marginTop="5dip"
-                                 
-                                >
-                            
-                            <TextView 
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:id="@+id/accrued_txt"
-                                />
-                            
-                            <ImageView 
-                                android:layout_marginLeft="3dip"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:src="@drawable/cat_head_icon"
-                                android:visibility="gone"
-                                android:id="@+id/cat_icon"
-                                />
-                            
-                            
-                            </LinearLayout>
-                            
-                            
-                            
-                            
-                            
-                        </LinearLayout>
-                        
-                        
-                        <ImageView 
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/navi_arrow"
-                            android:layout_gravity="center_vertical|right"
-                            android:layout_marginRight="5dip"
-                            />
-                        
-                        
-                        
-                        
-                    </FrameLayout>
-                    
-                    
-                   <FrameLayout 
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:id="@+id/logined_lay2"
-                        android:visibility="gone"
-                        >
-                       
-                       <LinearLayout 
-                            android:layout_gravity="center_vertical|left"
-                            android:layout_marginLeft="10dip"
-                            android:layout_width="wrap_content"
-                        	android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center_vertical"
-                            >
-                           
-                            <LinearLayout 
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                
-                                  android:layout_marginLeft="10dip"
-                                >
-                            
-                            <TextView 
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:text="喵喵开始为您赚钱啦!"
-                                android:textStyle="bold"
-                                />
-                            
-                            <ImageView 
-                                android:layout_marginLeft="3dip"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:src="@drawable/cat_head_icon"
-                                />
-                            
-                            
-                            </LinearLayout>
-                           
-                           
-                           <TextView 
-                                android:layout_marginTop="5dip"
-                                android:layout_height="wrap_content"
-                                android:layout_width="wrap_content"
-                                android:layout_marginLeft="10dip"
-                               android:id="@+id/act_txt2"
-                               />
-                           
-                       </LinearLayout>
-                       
-                       
-                       <ImageView 
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/navi_arrow"
-                            android:layout_gravity="center_vertical|right"
-                            android:layout_marginRight="5dip"
-                            />
-                       
-                       
-                   </FrameLayout>
-                    
-                    
-                </FrameLayout>
-                
-                <LinearLayout 
-                    android:layout_width="fill_parent"
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_vertical|center_horizontal"
-                     android:id="@+id/product_lay"
-                    ><!--  android:background="@drawable/product_bg" -->
-                    <FrameLayout 
-                         android:layout_width="fill_parent"
-                   		 android:layout_height="wrap_content"
-                    	 android:background="@drawable/home_product_top_bg"
-                        
-                        >
-                    
-                    <LinearLayout 
-                        android:layout_width="fill_parent"
-                    	android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                    	android:gravity="center_horizontal"
-                    	android:layout_gravity="center_vertical|center_horizontal"
-                        
-                        >
-                    
-                    
-                    <TextView 
-                        android:layout_height="wrap_content"
+                    android:paddingTop="20dp" >
+
+                    <TextView
+                        android:id="@+id/Name"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:layout_marginLeft="20dip"
-                           
-                        android:id="@+id/Name" 
-						android:textSize="18sp"
-                        android:drawableLeft="@drawable/star"                    
-                        />
-                    
-                    <LinearLayout 
-                        android:layout_marginTop="5dip"
-                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/star"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                         android:layout_gravity="left"
-                        android:layout_marginLeft="20dip"
-                        >
-                         <TextView 
-                        
                         android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="由"
-                        android:textSize="14sp"
-                        />
-                        
-                    
-                    <TextView 
-                        
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/BankName"
-                        android:textColor="@color/yellow"
-                        android:textSize="14sp"
-                        />
-                    
-                    <TextView 
-                        
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="无条件兑付"
-                        android:textSize="14sp"
-                        />
-                    
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/by"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/BankName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/yellow"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/cash_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cash"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="15sp" />
                     </LinearLayout>
-                    
-                    </LinearLayout>
-                    
-                    </FrameLayout>
-                                            
-                     <LinearLayout 
-                          android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                         >  
-                        
-                    <FrameLayout 
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/home_product_bottom_bg"
-                        >    
-                        
-                    
-                    <TextView 
-                        
-                        android:layout_marginTop="20dip"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="年化收益"
-                         android:layout_gravity="center_horizontal|top" 
-                        android:textSize="18sp"
-                        android:textColor="@color/grey"
-                        />
-                    
-                    <LinearLayout 
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                         android:layout_marginTop="10dip"
-                         android:orientation="horizontal"
-                         android:layout_gravity="center_horizontal|center_vertical" 
-                        >
-                    
-                     <TextView 
-                       
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/line_gray" />
+
+                    <TextView
                         android:id="@+id/Yield"
-                        android:textColor="@color/red"
-                         android:layout_gravity="center_horizontal|center_vertical" 
-                        android:textSize="100sp"
-                        />
-                     
-                     <TextView 
-                         android:layout_gravity="center_horizontal|bottom" 
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="%"
-                        android:textColor="@color/red"
-                        android:textSize="48sp"
-                        android:layout_marginBottom="10dip"
-                        />
-                    
-                    </LinearLayout>
-                    
-                    
-                    
-                    <LinearLayout 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center_horizontal|bottom"
-                        android:layout_marginBottom="25dip"
-                        ><!-- 15dip -->
-                        
-                        <TextView 
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/percent"
+                        android:textColor="@color/red"
+                        android:textSize="100sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="35dp"
+                        android:text="@string/year_yield"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginRight="2dp"
+                            android:background="@drawable/yellow_circle"
+                            android:contentDescription="@string/empty" />
+
+                        <TextView
                             android:id="@+id/Unit"
-                            android:textColor="@color/grey"
-                          android:textSize="18sp"
-                            />
-                        <TextView 
-                            android:layout_marginLeft="20dip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                           android:id="@+id/Duration"
-                            android:textColor="@color/grey"
-                            android:textSize="18sp"
-                            />
-                        
-                         <TextView 
-                            android:layout_marginLeft="20dip"
+                            android:text="@string/start_point"
+                            android:textColor="@color/text_essential"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="2dp"
+                            android:background="@drawable/yellow_circle"
+                            android:contentDescription="@string/empty" />
+
+                        <TextView
+                            android:id="@+id/Duration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="固定收益"
-                             android:textColor="@color/grey"
-                             android:textSize="18sp"
-                            />
+                            android:text="@string/day"
+                            android:textColor="@color/text_essential"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="2dp"
+                            android:background="@drawable/yellow_circle"
+                            android:contentDescription="@string/empty" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fix_yield"
+                            android:textColor="@color/text_essential"
+                            android:textSize="15sp" />
                     </LinearLayout>
-                    </FrameLayout>
-                    
-                    
-                    
-                    </LinearLayout> 
+
+                    <Button
+                        android:id="@+id/makeMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/yellow_btn_bg"
+                        android:text="@string/make_money"
+                        android:textColor="@color/default_white"
+                        android:textSize="21sp" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="111dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#f1f1e5" >
+
+                        <LinearLayout
+                            android:id="@+id/banners_lay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dip"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </HorizontalScrollView>
                 </LinearLayout>
-                
-                
-               <!--  <HorizontalScrollView 
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                   android:background="@drawable/banners_bg"
-                    android:id="@+id/horizontalScrollView"
-                    android:layout_gravity="center_vertical"
-                    android:background="@color/red"
-                    > android:background="@drawable/banners_bg"
-                    
-                    <LinearLayout 
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:id="@+id/banners_lay"
-                        android:layout_marginLeft="10dip"
-                        >
-                    </LinearLayout>
-                    
-                </HorizontalScrollView> -->
-            </LinearLayout>
-            
-            
-            <HorizontalScrollView 
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_weight="1"
-                    android:id="@+id/horizontalScrollView"
-                    android:layout_gravity="bottom"
-                   
-                    > <!-- android:background="@drawable/banners_bg" -->
-                    
-                    <LinearLayout 
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:id="@+id/banners_lay"
-                        android:layout_marginLeft="10dip"
-                        >
-                    </LinearLayout>
-                    
-                </HorizontalScrollView> 
-            
-            
-            
-            
-            
-            </LinearLayout>
-        </ScrollView>
-        
-        
-    </android.support.v4.widget.SwipeRefreshLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
 
-</LinearLayout>
-
-<ProgressBar
-     android:visibility="gone"
+    <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center"
         android:indeterminateDrawable="@drawable/progressbar"
-         />
+        android:visibility="gone" />
+
 </FrameLayout>

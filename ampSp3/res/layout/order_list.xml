@@ -16,7 +16,7 @@
 
     <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:background="@drawable/top_bg" >
 
         <Button
@@ -57,7 +57,6 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_horizontal|top"
         android:layout_marginTop="40dip"
-        android:id="@+id/no_data"
         android:text="您还没有下过订单哦"
         />
     

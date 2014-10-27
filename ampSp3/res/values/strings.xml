@@ -7,5 +7,26 @@
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="empty"></string>
+    <string name="login">登录</string>
+    <string name="by">由</string>
+    <string name="cash">无条件兑付</string>
+    <string name="percent">%</string>
+    <string name="year_yield">年化收益</string>
+    <string name="fix_yield">固定收益</string>
+    <string name="start_point">元起投</string>
+    <string name="day">天</string>
+    <string name="make_money">我要赚钱</string>
+    <string name="my_cat">我的喵喵</string>
+    <string name="amp">银企众盈</string>
+    <string name="cpl">商票贷</string>
+    <string name="order_list">订单列表</string>
+    <string name="fund_account">资金账户</string>
+    <string name="user_feedback">用户反馈</string>
+    <string name="about_jym">关于金银猫</string>
+    <string name="my_bankcard">我的银行卡</string>
+    <string name="setting">设置</string>
+    <string name="security_setting">安全设置</string>
+    <string name="encourage">喵喵求鼓励</string>
 
 </resources>

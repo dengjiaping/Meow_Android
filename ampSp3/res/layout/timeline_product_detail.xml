@@ -11,7 +11,7 @@
 
         <FrameLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:background="@drawable/top_bg" >
 
             <Button
@@ -63,7 +63,7 @@
                         <ImageView 
                               android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                             android:src="@drawable/yield_star_icon"
+                             android:src="@drawable/star"
                              android:id="@+id/yield_star_icon"
                             />    
                         

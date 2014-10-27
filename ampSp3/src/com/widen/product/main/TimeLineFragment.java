@@ -299,12 +299,12 @@ public class TimeLineFragment extends Fragment implements IHttpCallback,
 					dataEnd = true;
 				}
 				
-				if (infos != null && infos.size() == 3) {
-					((MainAct) getActivity()).needCat = true;
-					((MainAct) getActivity()).showCat();
-				} else {
-					((MainAct) getActivity()).hideCat();
-				}
+//				if (infos != null && infos.size() == 3) {
+//					((MainAct) getActivity()).needCat = true;
+//					((MainAct) getActivity()).showCat();
+//				} else {
+//					((MainAct) getActivity()).hideCat();
+//				}
 
 			} else if (msg.what == 2) {
 

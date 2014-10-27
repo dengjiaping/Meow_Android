@@ -36,7 +36,7 @@
 	
 	<color name="grey_1">#dacfbe</color>
 	<color name="production_name">#333333</color>
-	<color name="bg_color">#f1f0e5</color>
+	<color name="bg_color">#fbf9f3</color>
 	
 	<color name="point_red">#ee6025</color>
 	<color name="point_grey">#a4a4a4</color>
@@ -48,12 +48,19 @@
 	
 	
 	<color name="red">#e74c3c</color>
-	<color name="black">#4e4e4e</color>
-	<color name="green">#47b28b</color>
 	
 	<color name="circle_grey">#f4f6f6</color>
 	
 	<color name="top_yellow">#ffffbb33</color>
 	<color name="first_banner_bg">#f1f1e5</color>
+	
+	<color name="default_white">#ffffff</color>
+	<color name="text_essential">#333333</color>
+	<color name="text_secondary">#848484</color>
+	<color name="secondary_text">#a8a8a8</color>
+	<color name="button_yellow">#facc3b</color>
+	<color name="circle_yellow">#ffd32a</color>
+	<color name="line_gray">#e1ddd1</color>
+	<color name="list_color">#fafafa</color>
 	
 </resources>

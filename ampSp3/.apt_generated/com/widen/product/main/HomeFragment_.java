@@ -71,23 +71,14 @@ public final class HomeFragment_
     @Override
     public void onViewChanged(HasViews hasViews) {
         Yield = ((TextView) hasViews.findViewById(com.widen.R.id.Yield));
-        txt_2 = ((TextView) hasViews.findViewById(com.widen.R.id.txt_2));
         progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
         horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
         Unit = ((TextView) hasViews.findViewById(com.widen.R.id.Unit));
-        no_login_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.no_login_lay));
-        logined_lay = ((FrameLayout) hasViews.findViewById(com.widen.R.id.logined_lay));
         Name = ((TextView) hasViews.findViewById(com.widen.R.id.Name));
-        logined_lay2 = ((FrameLayout) hasViews.findViewById(com.widen.R.id.logined_lay2));
-        txt_3 = ((TextView) hasViews.findViewById(com.widen.R.id.txt_3));
         swipeRefreshLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.widen.R.id.swipeRefreshLayout));
-        act_txt2 = ((TextView) hasViews.findViewById(com.widen.R.id.act_txt2));
         banners_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.banners_lay));
         BankName = ((TextView) hasViews.findViewById(com.widen.R.id.BankName));
         Duration = ((TextView) hasViews.findViewById(com.widen.R.id.Duration));
-        txt_1 = ((TextView) hasViews.findViewById(com.widen.R.id.txt_1));
-        accrued_txt = ((TextView) hasViews.findViewById(com.widen.R.id.accrued_txt));
-        cat_icon = ((ImageView) hasViews.findViewById(com.widen.R.id.cat_icon));
         {
             View view = hasViews.findViewById(com.widen.R.id.login);
             if (view!= null) {
@@ -97,66 +88,6 @@ public final class HomeFragment_
                     @Override
                     public void onClick(View view) {
                         HomeFragment_.this.login();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(com.widen.R.id.logined_lay);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        HomeFragment_.this.logined_lay();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(com.widen.R.id.register);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        HomeFragment_.this.register();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(com.widen.R.id.product_lay);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        HomeFragment_.this.product_lay();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(com.widen.R.id.logined_lay2);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        HomeFragment_.this.logined_lay2();
                     }
 
                 }

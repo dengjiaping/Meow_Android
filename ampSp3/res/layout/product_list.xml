@@ -3,55 +3,74 @@
     xmlns:widen="http://schemas.android.com/apk/res/com.widen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
-    >
-	<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:orientation="vertical">
-    <FrameLayout 
+    android:background="@color/bg_color" >
+
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"    
+        android:layout_height="48dp"
         android:background="@drawable/top_bg"
-        >
-        
-       <TextView 
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           style="@style/titleStyle"
-           android:text="产品列表"
-           
-           />
-        
-        
-    </FrameLayout>
-    
-   <com.widen.widget.AppendList
-        	android:id="@+id/listview"
-        	android:layout_gravity="center_horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:cacheColorHint="#00000000"
-            android:divider="@null"
-		 android:dividerHeight="7dip"
-            android:scrollbars="none"
-            widen:footView="@layout/message_item_bottom"
-            widen:footerClickId="@+id/click"
-            widen:headView="@layout/message_item_top"
-            widen:hiddenFooter="true" 
-            >
-       </com.widen.widget.AppendList><!-- android:listSelector="@drawable/list_selector_color2"  -->
-	    
- 	</LinearLayout>
- 	
-	
-	 <ProgressBar
-     	android:visibility="gone"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/amp_tv"
+            android:layout_width="94dp"
+            android:layout_height="33dp"
+            android:background="@color/default_white"
+            android:gravity="center"
+            android:text="@string/amp"
+            android:textColor="@color/yellow"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cpl_tv"
+            android:layout_width="94dp"
+            android:layout_height="33dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/cpl"
+            android:textColor="@color/default_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.widen.widget.AppendList
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="7dip"
+        android:scrollbars="none"
+        widen:footView="@layout/message_item_bottom"
+        widen:footerClickId="@+id/click"
+        widen:headView="@layout/message_item_top"
+        widen:hiddenFooter="true" >
+    </com.widen.widget.AppendList>
+
+    <com.widen.widget.AppendList
+        android:id="@+id/cpl_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="7dip"
+        android:scrollbars="none"
+        android:visibility="gone"
+        widen:footView="@layout/message_item_bottom"
+        widen:footerClickId="@+id/click"
+        widen:headView="@layout/message_item_top"
+        widen:hiddenFooter="true" >
+    </com.widen.widget.AppendList>
+
+    <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center"
         android:indeterminateDrawable="@drawable/progressbar"
-         />
+        android:visibility="gone" />
+
 </FrameLayout>

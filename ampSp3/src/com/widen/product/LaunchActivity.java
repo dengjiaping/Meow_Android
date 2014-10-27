@@ -14,9 +14,11 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
@@ -51,27 +53,8 @@ public class LaunchActivity extends Activity implements IHttpCallback,
 		MobclickAgent.openActivityDurationTrack(false);
 		MobclickAgent.updateOnlineConfig(this);
 		MobclickAgent.setDebugMode(true);
-		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 	 
-		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		if (MyApplication.appContext.dm.widthPixels == 320
-				
-				&& MyApplication.appContext.dm.widthPixels == 480) {
-			showImageAnime(R.drawable.opening_320_480);
-		} else if (MyApplication.appContext.dm.widthPixels == 480
-				&& MyApplication.appContext.dm.widthPixels == 640) {
-			showImageAnime(R.drawable.opening_480_640);
-		} else if (MyApplication.appContext.dm.widthPixels == 480
-				&& MyApplication.appContext.dm.widthPixels == 854) {
-			showImageAnime(R.drawable.opening_480_854);
-		} else if (MyApplication.appContext.dm.widthPixels == 720
-				&& MyApplication.appContext.dm.widthPixels == 1280) {
-			showImageAnime(R.drawable.opening_720_1280);
-		} else {
-			showImageAnime(R.drawable.opening_480_800);
-		}
-
+		showImageAnime(R.drawable.start_logo);
 	}
 
 	private void showImageAnime(int bm) {
@@ -79,8 +62,9 @@ public class LaunchActivity extends Activity implements IHttpCallback,
 		iv.setScaleType(ScaleType.FIT_XY);
 		iv.setImageResource(bm);
 		setContentView(iv);
-		AlphaAnimation a = new AlphaAnimation(0f, 1f);
-		a.setDuration(3000);
+		AlphaAnimation a = new AlphaAnimation(0.1f, 1f);
+		a.setInterpolator(new AccelerateInterpolator());
+		a.setDuration(2200);
 		a.setAnimationListener(new AnimationListener() {
 
 			@Override
