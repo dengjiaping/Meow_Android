@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import com.umeng.analytics.MobclickAgent;
 import com.widen.R;
@@ -20,9 +21,12 @@ import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
 import com.widen.http.info.ItemsCountInfo;
+import com.widen.product.account.MyBankCardActivity;
+import com.widen.product.account.SettingActivity;
 
 @EFragment(R.layout.more)
-public class MoreFragment extends Fragment implements IHttpCallback {
+public class MoreFragment extends Fragment implements IHttpCallback,
+		OnClickListener {
 
 	@ViewById
 	LinearLayout no_login_lay;
@@ -33,12 +37,12 @@ public class MoreFragment extends Fragment implements IHttpCallback {
 	public static final String FLAG = "MoreFragment";
 	public static boolean isLogin;
 
-	// @ViewById
-	// ImageView red_point;
-
 	@AfterViews
 	public void afterViews() {
 		loginRefresh();
+
+		getActivity().findViewById(R.id.setting_lay).setOnClickListener(this);
+		getActivity().findViewById(R.id.bankcard_lay).setOnClickListener(this);
 	}
 
 	public void loginRefresh() {
@@ -77,7 +81,6 @@ public class MoreFragment extends Fragment implements IHttpCallback {
 		startActivity(new Intent(getActivity(), RegisterStepOneAct_.class));
 	}
 
-
 	@Click
 	public void login_out() {
 
@@ -109,20 +112,20 @@ public class MoreFragment extends Fragment implements IHttpCallback {
 
 	}
 
-//	@Click
-//	public void my_item_lay() {
-//		if (MyApplication.appContext.isLogin()) {
-//			// red_point.setVisibility(View.GONE);
-//			// ((MainAct)(getActivity())).red_point.setVisibility(View.GONE);
-//			Intent intent = new Intent(getActivity(), MyItemAct_.class);
-//			intent.putExtra("flag", MoreFragment.FLAG);
-//			startActivity(intent);
-//
-//		} else {
-//			((MainAct) getActivity()).flag = FLAG;
-//			startActivity(new Intent(getActivity(), LoginAct_.class));
-//		}
-//	}
+	// @Click
+	// public void my_item_lay() {
+	// if (MyApplication.appContext.isLogin()) {
+	// // red_point.setVisibility(View.GONE);
+	// // ((MainAct)(getActivity())).red_point.setVisibility(View.GONE);
+	// Intent intent = new Intent(getActivity(), MyItemAct_.class);
+	// intent.putExtra("flag", MoreFragment.FLAG);
+	// startActivity(intent);
+	//
+	// } else {
+	// ((MainAct) getActivity()).flag = FLAG;
+	// startActivity(new Intent(getActivity(), LoginAct_.class));
+	// }
+	// }
 
 	@Click
 	public void account_lay() {
@@ -187,6 +190,22 @@ public class MoreFragment extends Fragment implements IHttpCallback {
 		// TODO Auto-generated method stub
 		super.onPause();
 		MobclickAgent.onPageEnd("更多");
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.setting_lay:
+			Intent intent = new Intent(getActivity(), SettingActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.bankcard_lay:
+			Intent it=new Intent(getActivity(), MyBankCardActivity.class);
+			startActivity(it);
+			break;
+		default:
+			break;
+		}
 	}
 
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/title_layout" />
+
+    <include
+        android:id="@+id/bottom"
+        layout="@layout/pay_bottom" />
+
+    <ListView
+        android:id="@+id/bankcard_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/top"
+        android:cacheColorHint="@null"
+        android:listSelector="@null" />
+
+</RelativeLayout>

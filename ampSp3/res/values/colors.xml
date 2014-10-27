@@ -62,5 +62,7 @@
 	<color name="circle_yellow">#ffd32a</color>
 	<color name="line_gray">#e1ddd1</color>
 	<color name="list_color">#fafafa</color>
+	<color name="blue_link">#0061ff</color>
+	<color name="yellow_link">#eabe37</color>
 	
 </resources>

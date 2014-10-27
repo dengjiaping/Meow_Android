@@ -7,39 +7,47 @@
 
     <include layout="@layout/title_layout" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/line_gray" />
-
-    <FrameLayout
-        android:id="@+id/security_setting_lay"
+    <LinearLayout
+        android:id="@+id/security_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/list_color"
-        android:padding="10dip" >
+        android:orientation="vertical" 
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:id="@+id/security_setting_lay"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|left"
-            android:text="@string/security_setting"
-            android:textColor="@color/text_essential"
-            android:textSize="15sp" />
+            android:background="@color/list_color"
+            android:padding="10dip" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:contentDescription="@string/empty"
-            android:src="@drawable/navi_arrow" />
-    </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:text="@string/security_setting"
+                android:textColor="@color/text_essential"
+                android:textSize="15sp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/line_gray" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:contentDescription="@string/empty"
+                android:src="@drawable/navi_arrow" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray" />
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"

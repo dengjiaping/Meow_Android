@@ -28,5 +28,14 @@
     <string name="setting">设置</string>
     <string name="security_setting">安全设置</string>
     <string name="encourage">喵喵求鼓励</string>
+    <string name="pay_mode">金银猫手机支付与易联支付合作开通。</string>
+    <string name="know_more">了解更多</string>
+    <string name="add_new_card">添加新银行卡</string>
+    <string name="user">用户：</string>
+    <string name="no_real_01">对不起，您还不是实名认证用户</string>
+    <string name="no_real_02">认证并绑定银行卡后即可进行购买！</string>
+    <string name="once_bind">马上绑定</string>
+    <string name="wait_verify_01">您的银行卡正在认证中，</string>
+    <string name="wait_verify_02">请耐心等待结果！</string>
 
 </resources>
