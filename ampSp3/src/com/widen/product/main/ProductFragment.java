@@ -165,7 +165,7 @@ public class ProductFragment extends Fragment implements IHttpCallback{
 					start = start + 1;
 					getData();
 				}else{
-					String Id = infos.get(arg2 - 1).productIdentifier;
+					String Id = infos.get(arg2 - 1).productNo;
 					Intent intent = new Intent(getActivity(),ProductDetailAct_.class);
 					intent.putExtra("Id", Id);
 					startActivity(intent);
