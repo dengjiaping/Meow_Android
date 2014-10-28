@@ -37,5 +37,14 @@
     <string name="once_bind">马上绑定</string>
     <string name="wait_verify_01">您的银行卡正在认证中，</string>
     <string name="wait_verify_02">请耐心等待结果！</string>
+    <string name="no_buy">您还没做任何投资，\n赶快去看看我们的产品吧！</string>
+    <string name="look_list">查看产品列表</string>
+    <string name="real_verify">实名认证</string>
+    <string name="phone_num">手机号码</string>
+    <string name="id_card">身份证</string>
+    <string name="expect_income">预期收益</string>
+    <string name="input_fund">在投资金：%1$d元</string>
+    <string name="obtain_income">已获收益：%1$d元</string>
+    <string name="yuan">元</string>
 
 </resources>
