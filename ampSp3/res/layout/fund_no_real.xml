@@ -14,7 +14,7 @@
         android:contentDescription="@string/empty" />
 
     <TextView
-        android:id="@+id/phone_tv"
+        android:id="@+id/phone_num_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/icon"
@@ -28,7 +28,7 @@
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/phone_tv"
+        android:layout_below="@id/phone_num_tv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:singleLine="true"
@@ -52,6 +52,7 @@
         layout="@layout/pay_bottom" />
 
     <Button
+        android:id="@+id/once_bind_btn"
         android:layout_width="140dp"
         android:layout_height="45dp"
         android:layout_above="@id/bottom"

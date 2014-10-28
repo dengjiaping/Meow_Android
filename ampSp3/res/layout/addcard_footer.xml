@@ -12,6 +12,6 @@
         android:drawablePadding="3dp"
         android:text="@string/add_new_card"
         android:textColor="@color/yellow"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
 </FrameLayout>
