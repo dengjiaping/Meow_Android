@@ -71,24 +71,9 @@ public final class FeedbackAct_
     @Override
     public void onViewChanged(HasViews hasViews) {
         send = ((Button) hasViews.findViewById(id.send));
-        title = ((EditText) hasViews.findViewById(id.title));
         content = ((EditText) hasViews.findViewById(id.content));
         number = ((TextView) hasViews.findViewById(id.number));
-        {
-            View view = hasViews.findViewById(id.send);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        FeedbackAct_.this.send();
-                    }
-
-                }
-                );
-            }
-        }
+        title = ((EditText) hasViews.findViewById(id.title));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {
@@ -98,6 +83,21 @@ public final class FeedbackAct_
                     @Override
                     public void onClick(View view) {
                         FeedbackAct_.this.back();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.send);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        FeedbackAct_.this.send();
                     }
 
                 }

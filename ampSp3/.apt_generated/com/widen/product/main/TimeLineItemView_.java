@@ -81,21 +81,21 @@ public final class TimeLineItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        year = ((TextView) hasViews.findViewById(id.year));
-        month = ((TextView) hasViews.findViewById(id.month));
-        txt_2 = ((TextView) hasViews.findViewById(id.txt_2));
-        finall_lay = ((FrameLayout) hasViews.findViewById(id.finall_lay));
-        type_40_txt = ((TextView) hasViews.findViewById(id.type_40_txt));
-        txt_1 = ((TextView) hasViews.findViewById(id.txt_1));
-        day = ((TextView) hasViews.findViewById(id.day));
-        navi_arrow = ((ImageView) hasViews.findViewById(id.navi_arrow));
-        type_icon = ((ImageView) hasViews.findViewById(id.type_icon));
-        name = ((TextView) hasViews.findViewById(id.name));
-        timeline_color_line = ((ImageView) hasViews.findViewById(id.timeline_color_line));
         today_txt = ((TextView) hasViews.findViewById(id.today_txt));
-        month_lay = ((FrameLayout) hasViews.findViewById(id.month_lay));
-        day_lay = ((LinearLayout) hasViews.findViewById(id.day_lay));
+        name = ((TextView) hasViews.findViewById(id.name));
         year_lay = ((FrameLayout) hasViews.findViewById(id.year_lay));
+        txt_2 = ((TextView) hasViews.findViewById(id.txt_2));
+        navi_arrow = ((ImageView) hasViews.findViewById(id.navi_arrow));
+        month = ((TextView) hasViews.findViewById(id.month));
+        timeline_color_line = ((ImageView) hasViews.findViewById(id.timeline_color_line));
+        day = ((TextView) hasViews.findViewById(id.day));
+        txt_1 = ((TextView) hasViews.findViewById(id.txt_1));
+        year = ((TextView) hasViews.findViewById(id.year));
+        type_icon = ((ImageView) hasViews.findViewById(id.type_icon));
+        finall_lay = ((FrameLayout) hasViews.findViewById(id.finall_lay));
+        month_lay = ((FrameLayout) hasViews.findViewById(id.month_lay));
+        type_40_txt = ((TextView) hasViews.findViewById(id.type_40_txt));
+        day_lay = ((LinearLayout) hasViews.findViewById(id.day_lay));
     }
 
 }

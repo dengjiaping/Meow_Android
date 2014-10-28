@@ -72,21 +72,6 @@ public final class RegisterStepOneAct_
         phone = ((EditText) hasViews.findViewById(id.phone));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         {
-            View view = hasViews.findViewById(id.back);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        RegisterStepOneAct_.this.back();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(id.sub);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -95,6 +80,21 @@ public final class RegisterStepOneAct_
                     @Override
                     public void onClick(View view) {
                         RegisterStepOneAct_.this.sub();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.back);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        RegisterStepOneAct_.this.back();
                     }
 
                 }

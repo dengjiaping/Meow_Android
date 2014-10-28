@@ -73,24 +73,24 @@ public final class OrderDetailAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
-        Duration = ((TextView) hasViews.findViewById(id.Duration));
+        used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
+        SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
         Price = ((TextView) hasViews.findViewById(id.Price));
-        OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
-        Yield = ((TextView) hasViews.findViewById(id.Yield));
-        CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
-        no_use_item_lay = ((FrameLayout) hasViews.findViewById(id.no_use_item_lay));
-        BankName = ((TextView) hasViews.findViewById(id.BankName));
+        Duration = ((TextView) hasViews.findViewById(id.Duration));
+        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
         Name = ((TextView) hasViews.findViewById(id.Name));
         item_txt = ((TextView) hasViews.findViewById(id.item_txt));
-        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
         ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
+        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
         ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
-        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
+        CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
-        used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
         TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
+        OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
+        BankName = ((TextView) hasViews.findViewById(id.BankName));
+        no_use_item_lay = ((FrameLayout) hasViews.findViewById(id.no_use_item_lay));
+        Yield = ((TextView) hasViews.findViewById(id.Yield));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

@@ -11,6 +11,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/umeng-analytics-v5.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/androidannotations-api-3.0.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ShareSDK"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

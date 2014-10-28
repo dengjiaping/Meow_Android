@@ -517,7 +517,11 @@ public class HttpTaskFactory {
 					conn.setConnectTimeout(20000);
 					
 					conn.setRequestMethod(tks.getType());
-					conn.setDoInput(true);
+					if (tks.getType() == Constant.GET){
+						conn.setDoInput(false);
+					}else {
+						conn.setDoInput(true);	
+					}
 					conn.setDoOutput(true);
 					
 					conn.setRequestProperty("Content-Type",tks.getContentType());

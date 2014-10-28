@@ -80,13 +80,13 @@ public final class ItemItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        use = ((Button) hasViews.findViewById(id.use));
-        HasExpired = ((TextView) hasViews.findViewById(id.HasExpired));
         name = ((TextView) hasViews.findViewById(id.name));
-        InterestDescription = ((TextView) hasViews.findViewById(id.InterestDescription));
-        Expires = ((TextView) hasViews.findViewById(id.Expires));
         img = ((URLImageView) hasViews.findViewById(id.img));
         delete = ((Button) hasViews.findViewById(id.delete));
+        InterestDescription = ((TextView) hasViews.findViewById(id.InterestDescription));
+        use = ((Button) hasViews.findViewById(id.use));
+        Expires = ((TextView) hasViews.findViewById(id.Expires));
+        HasExpired = ((TextView) hasViews.findViewById(id.HasExpired));
     }
 
 }

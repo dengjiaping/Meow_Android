@@ -32,8 +32,8 @@ public final class OrderListAct_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
-    public final static String INFOS_EXTRA = "info";
     public final static String FLAG_EXTRA = "flag";
+    public final static String INFOS_EXTRA = "info";
     public final static String ITEM_INFO_EXTRA = "itemInfo";
 
     @Override
@@ -78,8 +78,8 @@ public final class OrderListAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        listview = ((ListView) hasViews.findViewById(id.listview));
         no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
+        listview = ((ListView) hasViews.findViewById(id.listview));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         {
             View view = hasViews.findViewById(id.back);
@@ -103,11 +103,11 @@ public final class OrderListAct_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey(INFOS_EXTRA)) {
-                infos = ((BaseListInfo<OrderInfo> ) extras_.getSerializable(INFOS_EXTRA));
-            }
             if (extras_.containsKey(FLAG_EXTRA)) {
                 flag = extras_.getString(FLAG_EXTRA);
+            }
+            if (extras_.containsKey(INFOS_EXTRA)) {
+                infos = ((BaseListInfo<OrderInfo> ) extras_.getSerializable(INFOS_EXTRA));
             }
             if (extras_.containsKey(ITEM_INFO_EXTRA)) {
                 itemInfo = ((ItemInfo) extras_.getSerializable(ITEM_INFO_EXTRA));
@@ -163,13 +163,13 @@ public final class OrderListAct_
             }
         }
 
-        public OrderListAct_.IntentBuilder_ infos(BaseListInfo<OrderInfo> infos) {
-            intent_.putExtra(INFOS_EXTRA, ((Serializable) infos));
+        public OrderListAct_.IntentBuilder_ flag(String flag) {
+            intent_.putExtra(FLAG_EXTRA, flag);
             return this;
         }
 
-        public OrderListAct_.IntentBuilder_ flag(String flag) {
-            intent_.putExtra(FLAG_EXTRA, flag);
+        public OrderListAct_.IntentBuilder_ infos(BaseListInfo<OrderInfo> infos) {
+            intent_.putExtra(INFOS_EXTRA, ((Serializable) infos));
             return this;
         }
 

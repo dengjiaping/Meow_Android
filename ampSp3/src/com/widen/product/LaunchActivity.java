@@ -49,7 +49,7 @@ public class LaunchActivity extends Activity implements IHttpCallback,
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		ShareSDK.initSDK(this);
+		//ShareSDK.initSDK(this);
 		MobclickAgent.openActivityDurationTrack(false);
 		MobclickAgent.updateOnlineConfig(this);
 		MobclickAgent.setDebugMode(true);

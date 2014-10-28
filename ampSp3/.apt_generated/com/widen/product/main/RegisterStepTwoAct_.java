@@ -74,21 +74,21 @@ public final class RegisterStepTwoAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        sendverification_icon = ((ImageView) hasViews.findViewById(id.sendverification_icon));
-        verification = ((EditText) hasViews.findViewById(id.verification));
-        sendverification_txt = ((TextView) hasViews.findViewById(id.sendverification_txt));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        sendverification_txt = ((TextView) hasViews.findViewById(id.sendverification_txt));
         sendverification = ((Button) hasViews.findViewById(id.sendverification));
+        verification = ((EditText) hasViews.findViewById(id.verification));
         remind = ((TextView) hasViews.findViewById(id.remind));
+        sendverification_icon = ((ImageView) hasViews.findViewById(id.sendverification_icon));
         {
-            View view = hasViews.findViewById(id.back);
+            View view = hasViews.findViewById(id.sendverification);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        RegisterStepTwoAct_.this.back();
+                        RegisterStepTwoAct_.this.sendverification();
                     }
 
                 }
@@ -111,14 +111,14 @@ public final class RegisterStepTwoAct_
             }
         }
         {
-            View view = hasViews.findViewById(id.sendverification);
+            View view = hasViews.findViewById(id.back);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        RegisterStepTwoAct_.this.sendverification();
+                        RegisterStepTwoAct_.this.back();
                     }
 
                 }

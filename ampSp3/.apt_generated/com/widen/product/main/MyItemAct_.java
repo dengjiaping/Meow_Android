@@ -75,8 +75,8 @@ public final class MyItemAct_
     @Override
     public void onViewChanged(HasViews hasViews) {
         listview = ((ListView) hasViews.findViewById(id.listview));
-        no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

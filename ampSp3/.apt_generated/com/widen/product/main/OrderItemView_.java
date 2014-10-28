@@ -79,12 +79,12 @@ public final class OrderItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        OrderIdentifier = ((TextView) hasViews.findViewById(id.OrderIdentifier));
-        Principal = ((TextView) hasViews.findViewById(id.Principal));
-        OrderTime = ((TextView) hasViews.findViewById(id.OrderTime));
-        use = ((Button) hasViews.findViewById(id.use));
         Interest = ((TextView) hasViews.findViewById(id.Interest));
+        OrderIdentifier = ((TextView) hasViews.findViewById(id.OrderIdentifier));
+        use = ((Button) hasViews.findViewById(id.use));
+        OrderTime = ((TextView) hasViews.findViewById(id.OrderTime));
         used = ((TextView) hasViews.findViewById(id.used));
+        Principal = ((TextView) hasViews.findViewById(id.Principal));
     }
 
 }

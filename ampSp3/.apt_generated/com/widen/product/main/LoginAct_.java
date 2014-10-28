@@ -72,12 +72,12 @@ public final class LoginAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        password = ((EditText) hasViews.findViewById(id.password));
-        forget_icon = ((ImageView) hasViews.findViewById(id.forget_icon));
         error_txt = ((TextView) hasViews.findViewById(id.error_txt));
-        phone = ((EditText) hasViews.findViewById(id.phone));
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         error_lay = ((FrameLayout) hasViews.findViewById(id.error_lay));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        phone = ((EditText) hasViews.findViewById(id.phone));
+        forget_icon = ((ImageView) hasViews.findViewById(id.forget_icon));
+        password = ((EditText) hasViews.findViewById(id.password));
         {
             View view = hasViews.findViewById(id.register);
             if (view!= null) {
@@ -87,21 +87,6 @@ public final class LoginAct_
                     @Override
                     public void onClick(View view) {
                         LoginAct_.this.register();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.forget_icon);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        LoginAct_.this.forget_icon();
                     }
 
                 }
@@ -132,6 +117,21 @@ public final class LoginAct_
                     @Override
                     public void onClick(View view) {
                         LoginAct_.this.login();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.forget_icon);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        LoginAct_.this.forget_icon();
                     }
 
                 }

@@ -68,11 +68,11 @@ public final class HomeFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
-        Unit = ((TextView) hasViews.findViewById(com.widen.R.id.Unit));
-        BankName = ((TextView) hasViews.findViewById(com.widen.R.id.BankName));
-        horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
         Yield = ((TextView) hasViews.findViewById(com.widen.R.id.Yield));
+        progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
+        horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
+        BankName = ((TextView) hasViews.findViewById(com.widen.R.id.BankName));
+        Unit = ((TextView) hasViews.findViewById(com.widen.R.id.Unit));
         banners_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.banners_lay));
         swipeRefreshLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.widen.R.id.swipeRefreshLayout));
         Name = ((TextView) hasViews.findViewById(com.widen.R.id.Name));

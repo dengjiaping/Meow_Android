@@ -1,6 +1,7 @@
 package com.widen.product.main;
 
 import org.androidannotations.annotations.AfterViews;
+
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;

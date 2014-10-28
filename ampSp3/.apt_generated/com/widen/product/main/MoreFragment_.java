@@ -64,8 +64,8 @@ public final class MoreFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        no_login_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.no_login_lay));
         login_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.login_lay));
+        no_login_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.no_login_lay));
         {
             View view = hasViews.findViewById(com.widen.R.id.login);
             if (view!= null) {
@@ -75,21 +75,6 @@ public final class MoreFragment_
                     @Override
                     public void onClick(View view) {
                         MoreFragment_.this.login();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(com.widen.R.id.login_out);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MoreFragment_.this.login_out();
                     }
 
                 }
@@ -112,21 +97,6 @@ public final class MoreFragment_
             }
         }
         {
-            View view = hasViews.findViewById(com.widen.R.id.register);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MoreFragment_.this.register();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(com.widen.R.id.account_lay);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -135,6 +105,36 @@ public final class MoreFragment_
                     @Override
                     public void onClick(View view) {
                         MoreFragment_.this.account_lay();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(com.widen.R.id.login_out);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MoreFragment_.this.login_out();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(com.widen.R.id.register);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MoreFragment_.this.register();
                     }
 
                 }

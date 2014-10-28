@@ -76,27 +76,27 @@ public final class TimeLineProductDetailAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        SellingStatus_icon = ((ImageView) hasViews.findViewById(id.SellingStatus_icon));
-        Name = ((TextView) hasViews.findViewById(id.Name));
-        Yield = ((TextView) hasViews.findViewById(id.Yield));
-        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
-        Price = ((TextView) hasViews.findViewById(id.Price));
-        seekbar_red = ((MySeekBar) hasViews.findViewById(id.seekbar_red));
+        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
+        listview = ((MyListView) hasViews.findViewById(id.listview));
+        flag_icon = ((ImageView) hasViews.findViewById(id.flag_icon));
+        Unit_txt = ((TextView) hasViews.findViewById(id.Unit_txt));
         Duration = ((TextView) hasViews.findViewById(id.Duration));
-        seekbar_blue = ((MySeekBar) hasViews.findViewById(id.seekbar_blue));
+        SellingStatus_icon = ((ImageView) hasViews.findViewById(id.SellingStatus_icon));
+        yield_star_icon = ((ImageView) hasViews.findViewById(id.yield_star_icon));
+        cat_left_icon = ((ImageView) hasViews.findViewById(id.cat_left_icon));
+        seekbar_red = ((MySeekBar) hasViews.findViewById(id.seekbar_red));
         over_lay = ((FrameLayout) hasViews.findViewById(id.over_lay));
         SellingStatus_txt = ((TextView) hasViews.findViewById(id.SellingStatus_txt));
-        cat_left_icon = ((ImageView) hasViews.findViewById(id.cat_left_icon));
-        ExtraYield = ((TextView) hasViews.findViewById(id.ExtraYield));
-        yield_star_icon = ((ImageView) hasViews.findViewById(id.yield_star_icon));
-        Unit_txt = ((TextView) hasViews.findViewById(id.Unit_txt));
-        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
-        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
-        flag_icon = ((ImageView) hasViews.findViewById(id.flag_icon));
         item_expected_lay = ((FrameLayout) hasViews.findViewById(id.item_expected_lay));
-        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        listview = ((MyListView) hasViews.findViewById(id.listview));
+        seekbar_blue = ((MySeekBar) hasViews.findViewById(id.seekbar_blue));
+        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        Name = ((TextView) hasViews.findViewById(id.Name));
+        Price = ((TextView) hasViews.findViewById(id.Price));
+        ExtraYield = ((TextView) hasViews.findViewById(id.ExtraYield));
+        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
+        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
+        Yield = ((TextView) hasViews.findViewById(id.Yield));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

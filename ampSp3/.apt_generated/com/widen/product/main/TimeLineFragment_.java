@@ -69,27 +69,12 @@ public final class TimeLineFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        line_bg = ((ImageView) hasViews.findViewById(com.widen.R.id.line_bg));
-        xListView = ((XListView) hasViews.findViewById(com.widen.R.id.xListView));
         no_login_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.no_login_lay));
         login_lay = ((FrameLayout) hasViews.findViewById(com.widen.R.id.login_lay));
-        today = ((Button) hasViews.findViewById(com.widen.R.id.today));
+        xListView = ((XListView) hasViews.findViewById(com.widen.R.id.xListView));
         progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
-        {
-            View view = hasViews.findViewById(com.widen.R.id.goto_login);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TimeLineFragment_.this.goto_login();
-                    }
-
-                }
-                );
-            }
-        }
+        line_bg = ((ImageView) hasViews.findViewById(com.widen.R.id.line_bg));
+        today = ((Button) hasViews.findViewById(com.widen.R.id.today));
         {
             View view = hasViews.findViewById(com.widen.R.id.today);
             if (view!= null) {
@@ -99,6 +84,21 @@ public final class TimeLineFragment_
                     @Override
                     public void onClick(View view) {
                         TimeLineFragment_.this.today();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(com.widen.R.id.goto_login);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TimeLineFragment_.this.goto_login();
                     }
 
                 }
