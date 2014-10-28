@@ -26,8 +26,8 @@ import com.widen.application.MyApplication;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.BannerInfo;
-import com.widen.http.info.TopInfo;
+import com.widen.http.model.BannerInfo;
+import com.widen.http.model.TopInfo;
 import com.widen.widget.URLImageView;
 
 @EFragment(R.layout.home)
@@ -106,17 +106,18 @@ public class HomeFragment extends Fragment implements IHttpCallback,
 		MobclickAgent.onEvent(getActivity(), "首页推荐");
 		Intent intent = new Intent(getActivity(), ProductDetailAct_.class);
 		if (info != null) {
-			intent.putExtra("Id", info.topInfo2.Id);
+			intent.putExtra("Id", info.topInfo2.productIdentifier);
 		}
 		startActivity(intent);
 	}
 
 	private void initView() {
-		Name.setText(info.topInfo2.Name);
-		BankName.setText(info.topInfo2.BankName);
-		Yield.setText(info.topInfo2.Yield);
-		Unit.setText(info.topInfo2.Unit + "元起投");
-		Duration.setText(info.topInfo2.Duration + "天");
+		
+		Name.setText(String.format("%s第%d期", info.topInfo2.productName,info.topInfo2.productNumber));
+		BankName.setText(info.topInfo2.bankName);
+		Yield.setText(info.topInfo2.yield+"");
+		Unit.setText(info.topInfo2.unitPrice + "元起投");
+		Duration.setText(info.topInfo2.period + "天");
 		banners_lay.removeAllViews();
 		if (MyApplication.appContext.dm.widthPixels <= 480) {
 			for (int i = 0; i < info.bannerInfos.size(); i++) {
@@ -305,7 +306,11 @@ public class HomeFragment extends Fragment implements IHttpCallback,
 	private void getData() {
 		progressbar.setVisibility(View.VISIBLE);
 		IHttpTask task = HttpTaskFactory.getFactory().createTask(
-				HttpTaskFactory.BATCH);
+				HttpTaskFactory.GET_BANNER);
+		HttpTaskFactory.getFactory().sendRequest(this, task);
+		
+		task = HttpTaskFactory.getFactory().createTask(
+				HttpTaskFactory.GET_TOP_PRODUCT_FOR_BA);
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 
@@ -347,8 +352,13 @@ public class HomeFragment extends Fragment implements IHttpCallback,
 		// TODO Auto-generated method stub
 		// getData();
 		IHttpTask task = HttpTaskFactory.getFactory().createTask(
-				HttpTaskFactory.BATCH);
+				HttpTaskFactory.GET_BANNER);
 		HttpTaskFactory.getFactory().sendRequest(this, task);
+		
+		task = HttpTaskFactory.getFactory().createTask(
+				HttpTaskFactory.GET_TOP_PRODUCT_FOR_BA);
+		HttpTaskFactory.getFactory().sendRequest(this, task);
+		
 		new Handler().postDelayed(new Runnable() {
 			public void run() {
 				swipeRefreshLayout.setRefreshing(false);

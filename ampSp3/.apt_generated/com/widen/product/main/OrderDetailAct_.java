@@ -73,24 +73,24 @@ public final class OrderDetailAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
-        Price = ((TextView) hasViews.findViewById(id.Price));
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
-        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        Duration = ((TextView) hasViews.findViewById(id.Duration));
+        Price = ((TextView) hasViews.findViewById(id.Price));
+        OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
         Yield = ((TextView) hasViews.findViewById(id.Yield));
         CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
-        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
-        Name = ((TextView) hasViews.findViewById(id.Name));
-        item_txt = ((TextView) hasViews.findViewById(id.item_txt));
-        SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
-        Duration = ((TextView) hasViews.findViewById(id.Duration));
         no_use_item_lay = ((FrameLayout) hasViews.findViewById(id.no_use_item_lay));
         BankName = ((TextView) hasViews.findViewById(id.BankName));
-        OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
-        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
-        used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
+        Name = ((TextView) hasViews.findViewById(id.Name));
+        item_txt = ((TextView) hasViews.findViewById(id.item_txt));
         SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
+        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
+        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
+        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
+        used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
+        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

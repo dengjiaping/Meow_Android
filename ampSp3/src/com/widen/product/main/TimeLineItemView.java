@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.widen.R;
-import com.widen.http.info.TimeLineInfo;
+import com.widen.http.model.TimeLineInfo;
 import com.widen.util.Util;
 @EViewGroup(R.layout.time_line_item)
 public class TimeLineItemView extends LinearLayout {

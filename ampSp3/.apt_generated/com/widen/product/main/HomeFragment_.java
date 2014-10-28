@@ -11,9 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -70,14 +68,14 @@ public final class HomeFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        Yield = ((TextView) hasViews.findViewById(com.widen.R.id.Yield));
         progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
-        horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
         Unit = ((TextView) hasViews.findViewById(com.widen.R.id.Unit));
-        Name = ((TextView) hasViews.findViewById(com.widen.R.id.Name));
-        swipeRefreshLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.widen.R.id.swipeRefreshLayout));
-        banners_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.banners_lay));
         BankName = ((TextView) hasViews.findViewById(com.widen.R.id.BankName));
+        horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
+        Yield = ((TextView) hasViews.findViewById(com.widen.R.id.Yield));
+        banners_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.banners_lay));
+        swipeRefreshLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.widen.R.id.swipeRefreshLayout));
+        Name = ((TextView) hasViews.findViewById(com.widen.R.id.Name));
         Duration = ((TextView) hasViews.findViewById(com.widen.R.id.Duration));
         {
             View view = hasViews.findViewById(com.widen.R.id.login);

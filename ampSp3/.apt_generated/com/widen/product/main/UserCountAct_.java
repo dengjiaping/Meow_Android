@@ -70,18 +70,18 @@ public final class UserCountAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        no_user_lay = ((LinearLayout) hasViews.findViewById(id.no_user_lay));
         IdCard = ((TextView) hasViews.findViewById(id.IdCard));
+        no_user_lay = ((LinearLayout) hasViews.findViewById(id.no_user_lay));
         InvestingPrice = ((TextView) hasViews.findViewById(id.InvestingPrice));
-        RealName = ((TextView) hasViews.findViewById(id.RealName));
-        ExpectedEarnings = ((TextView) hasViews.findViewById(id.ExpectedEarnings));
-        Earnings = ((TextView) hasViews.findViewById(id.Earnings));
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        phone = ((TextView) hasViews.findViewById(id.phone));
         data_lay = ((LinearLayout) hasViews.findViewById(id.data_lay));
-        no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
-        Cellphone = ((TextView) hasViews.findViewById(id.Cellphone));
+        RealName = ((TextView) hasViews.findViewById(id.RealName));
+        phone = ((TextView) hasViews.findViewById(id.phone));
+        Earnings = ((TextView) hasViews.findViewById(id.Earnings));
         user_lay = ((LinearLayout) hasViews.findViewById(id.user_lay));
+        ExpectedEarnings = ((TextView) hasViews.findViewById(id.ExpectedEarnings));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        Cellphone = ((TextView) hasViews.findViewById(id.Cellphone));
+        no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

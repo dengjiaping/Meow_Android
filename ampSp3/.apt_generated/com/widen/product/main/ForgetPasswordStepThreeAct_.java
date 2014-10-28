@@ -28,8 +28,8 @@ public final class ForgetPasswordStepThreeAct_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
-    public final static String PHONE_EXTRA = "phone";
     public final static String TOKEN_EXTRA = "Token";
+    public final static String PHONE_EXTRA = "phone";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,8 +75,8 @@ public final class ForgetPasswordStepThreeAct_
     public void onViewChanged(HasViews hasViews) {
         password = ((EditText) hasViews.findViewById(id.password));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        comfirm_password = ((EditText) hasViews.findViewById(id.comfirm_password));
         txt = ((TextView) hasViews.findViewById(id.txt));
+        comfirm_password = ((EditText) hasViews.findViewById(id.comfirm_password));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {
@@ -113,11 +113,11 @@ public final class ForgetPasswordStepThreeAct_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey(PHONE_EXTRA)) {
-                phone = extras_.getString(PHONE_EXTRA);
-            }
             if (extras_.containsKey(TOKEN_EXTRA)) {
                 Token = extras_.getString(TOKEN_EXTRA);
+            }
+            if (extras_.containsKey(PHONE_EXTRA)) {
+                phone = extras_.getString(PHONE_EXTRA);
             }
         }
     }
@@ -170,13 +170,13 @@ public final class ForgetPasswordStepThreeAct_
             }
         }
 
-        public ForgetPasswordStepThreeAct_.IntentBuilder_ phone(String phone) {
-            intent_.putExtra(PHONE_EXTRA, phone);
+        public ForgetPasswordStepThreeAct_.IntentBuilder_ Token(String Token) {
+            intent_.putExtra(TOKEN_EXTRA, Token);
             return this;
         }
 
-        public ForgetPasswordStepThreeAct_.IntentBuilder_ Token(String Token) {
-            intent_.putExtra(TOKEN_EXTRA, Token);
+        public ForgetPasswordStepThreeAct_.IntentBuilder_ phone(String phone) {
+            intent_.putExtra(PHONE_EXTRA, phone);
             return this;
         }
 

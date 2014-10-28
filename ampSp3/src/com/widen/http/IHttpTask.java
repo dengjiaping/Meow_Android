@@ -2,44 +2,49 @@ package com.widen.http;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import com.widen.util.Constant;
 
-import com.widen.http.parsers.AbsHandler;
+
+public abstract class IHttpTask{
 
 
-public interface IHttpTask <T> {
-
-	//public static boolean notEncode = false;
-	/**
-	 * 请求&lti n&gt...&lt/i&gt部分 字符串
-	 * 
-	 * @return
-	 */
-	String getSubUrl();
+	public abstract String getSubUrl();
 
 	/**
 	 * 返回报文截取的字符串标题
 	 * 
 	 * @return
 	 */
-	String getLabel();
+	public abstract String getLabel();
 
 	/**
 	 * 请求参数
 	 * 
 	 * @param params
 	 */
-	void setParams(String[] params);
+	public abstract void setParams(String[] params);
 	
-	String getParams();
+	public abstract String getParams();
 	
-	String getType();
+	public abstract String getType();
 	
-	String getContentType();
+	public final String getContentType(){
 	
-	Object getData(JSONObject obj)  throws Exception;
+		if(getType() == Constant.GET){
+			return "application/x-www-form-urlencoded; charset=utf-8";
+		}else if (getType() == Constant.POST){
+			return "application/json; charset=utf-8";
+		}
+		return "";
+	}
 	
-	Object getData(JSONArray obj)  throws Exception;
+	public boolean isRalativeUrl(){
+		return true;
+	}
 	
-	boolean isNewApi();
-
+	public abstract Object getData(JSONObject obj)  throws Exception;
+	
+	public abstract Object getData(JSONArray obj)  throws Exception;
+	
+	
 }

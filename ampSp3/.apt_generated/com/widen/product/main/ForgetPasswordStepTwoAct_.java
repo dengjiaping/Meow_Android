@@ -75,11 +75,11 @@ public final class ForgetPasswordStepTwoAct_
     @Override
     public void onViewChanged(HasViews hasViews) {
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        remind = ((TextView) hasViews.findViewById(id.remind));
-        sendverification = ((Button) hasViews.findViewById(id.sendverification));
         sendverification_txt = ((TextView) hasViews.findViewById(id.sendverification_txt));
         sendverification_icon = ((ImageView) hasViews.findViewById(id.sendverification_icon));
         verification = ((EditText) hasViews.findViewById(id.verification));
+        remind = ((TextView) hasViews.findViewById(id.remind));
+        sendverification = ((Button) hasViews.findViewById(id.sendverification));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.widen.R;
-import com.widen.http.info.ProductionsInfo2;
+import com.widen.http.model.ProductionsInfo2;
  
 @EViewGroup(R.layout.product_item)
 public class ProductItemView extends LinearLayout{
@@ -99,13 +99,13 @@ public class ProductItemView extends LinearLayout{
 	
 	
 	public void bind(ProductionsInfo2 info ) {  	
-		Yield.setText(info.Yield);
-		Duration.setText(info.Duration + "天");
-		TotalNumber.setText(info.TotalNumber + "元");
-		being.setText(info.begin + "元起投");
+		Yield.setText(info.yield+"");
+		Duration.setText(info.period + "天");
+		//TotalNumber.setText(info.TotalNumber + "元");
+		being.setText(info.unitPrice + "元起投");
 		
-		Name.setText(info.Name);
-		BankName.setText(info.BankName);
+		Name.setText(info.productName);
+		BankName.setText(info.bankName);
 		
 		
 		Duration.setTextColor(getResources().getColor(R.color.black));
@@ -117,12 +117,12 @@ public class ProductItemView extends LinearLayout{
 		being.setTextColor(getResources().getColor(R.color.black));
 		bank_txt.setTextColor(getResources().getColor(R.color.grey));
 		
-		switch (Integer.parseInt(info.SellingStatus)) {
+		switch (info.showingStatus) {
 		case 10:
 			Yield.setTextColor(getResources().getColor(R.color.red));
 			Yield_txt.setTextColor(getResources().getColor(R.color.red));			
 			SellingStatus.setImageResource(R.drawable.wait_sale_icon);
-			Date.setText("开售日期  " + info.PubBegin);
+			Date.setText("开售日期  " + info.startSellTime);
 			product_progressbar_lay.setVisibility(View.GONE);
 			break;
 			
@@ -131,8 +131,8 @@ public class ProductItemView extends LinearLayout{
 			Yield_txt.setTextColor(getResources().getColor(R.color.red));
 			SellingStatus.setImageResource(R.drawable.rushbuy_icon);
 			product_progressbar_lay.setVisibility(View.VISIBLE);		
-			product_progressbar.setProgress(Integer.parseInt(info.FundedPercentage));
-			Date.setText("停售日期  " + info.PubEnd);
+			//product_progressbar.setProgress(Integer.parseInt(info.FundedPercentage));
+			Date.setText("停售日期  " + info.endSellTime);
 			break;
 			
 		case 30:
@@ -150,7 +150,7 @@ public class ProductItemView extends LinearLayout{
 			SellingStatus.setImageResource(R.drawable.wait_payback_icon);
 			product_progressbar_lay.setVisibility(View.GONE);
 
-			Date.setText("结息日期  " + info.SettleDay);
+			Date.setText("结息日期  " + info.SettleDate);
 			break;
 			
 		case 50:
@@ -158,7 +158,7 @@ public class ProductItemView extends LinearLayout{
 			Yield_txt.setTextColor(getResources().getColor(R.color.red));
 			SellingStatus.setImageResource(R.drawable.paybacking_icon);
 			product_progressbar_lay.setVisibility(View.GONE);
-			Date.setText("最迟还款日  " + info.DueDate);
+			//Date.setText("最迟还款日  " + info.DueDate);
 			break;	
 			
 		case 60:

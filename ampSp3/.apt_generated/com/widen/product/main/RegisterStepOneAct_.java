@@ -69,8 +69,8 @@ public final class RegisterStepOneAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         phone = ((EditText) hasViews.findViewById(id.phone));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

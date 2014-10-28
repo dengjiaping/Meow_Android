@@ -10,7 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.widen.db.Store;
-import com.widen.http.info.BaseListInfo;
+import com.widen.http.model.BaseListInfo;
 import com.widen.util.ImageManager;
 import com.widen.util.gps.GPSInfo;
 import com.widen.util.gps.GaoDeLocationService;

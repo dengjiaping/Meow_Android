@@ -20,7 +20,7 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.UserInfo;
+import com.widen.http.model.UserInfo;
 import com.widen.product.BaseActivity;
 @EActivity(R.layout.user_count)
 public class UserCountAct extends BaseActivity implements IHttpCallback{
@@ -79,7 +79,7 @@ public class UserCountAct extends BaseActivity implements IHttpCallback{
 	
 	private void getData(){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.USERS_SUMMARYINFO);
+		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.USERS_INFO);
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 	
@@ -91,33 +91,33 @@ public class UserCountAct extends BaseActivity implements IHttpCallback{
 	
 	
 	private void initView(){
-		if(userInfo.Verified){
-			if(!TextUtils.isEmpty( userInfo.InvestingPrice)){
-				String tString = userInfo.InvestingPrice.replace("0", "").replace(".", "");
-				if(TextUtils.isEmpty(tString)){
-					data_lay.setVisibility(View.GONE);
-					no_data_lay.setVisibility(View.VISIBLE);
-				}else{
-					data_lay.setVisibility(View.VISIBLE);
-					no_data_lay.setVisibility(View.GONE);
-				}
-			}
+		if(userInfo.verified){
+//			if(!TextUtils.isEmpty( userInfo.nvestingPrice)){
+//				String tString = userInfo.InvestingPrice.replace("0", "").replace(".", "");
+//				if(TextUtils.isEmpty(tString)){
+//					data_lay.setVisibility(View.GONE);
+//					no_data_lay.setVisibility(View.VISIBLE);
+//				}else{
+//					data_lay.setVisibility(View.VISIBLE);
+//					no_data_lay.setVisibility(View.GONE);
+//				}
+//			}
 			
 		}else{
-			phone.setText("用户: " + userInfo.Cellphone);
+			phone.setText("用户: " + userInfo.cellPhone);
 			no_user_lay.setVisibility(View.VISIBLE);
 			user_lay.setVisibility(View.GONE);
 		}
 		
 		
-		ExpectedEarnings.setText(userInfo.ExpectedEarnings);
-		InvestingPrice.setText("在投资金 " + userInfo.InvestingPrice + "元");
+//		ExpectedEarnings.setText(userInfo.ExpectedEarnings);
+//		InvestingPrice.setText("在投资金 " + userInfo.InvestingPrice + "元");
+//		
+//		Earnings.setText("已获收益 " + userInfo.Earnings + "元");
 		
-		Earnings.setText("已获收益 " + userInfo.Earnings + "元");
-		
-		RealName.setText(userInfo.RealName);
-		Cellphone.setText(userInfo.Cellphone);
-		IdCard.setText(userInfo.IdCard);
+		RealName.setText(userInfo.realName);
+		Cellphone.setText(userInfo.cellPhone);
+		IdCard.setText(userInfo.credentialNo);
 		
 		
 	}

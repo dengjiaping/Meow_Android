@@ -30,9 +30,9 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.BaseListInfo;
-import com.widen.http.info.ItemInfo;
-import com.widen.http.info.OrderInfo;
+import com.widen.http.model.BaseListInfo;
+import com.widen.http.model.ItemInfo;
+import com.widen.http.model.OrderInfo;
 import com.widen.product.BaseActivity;
 import com.widen.util.ViewUtil;
 @EActivity(R.layout.order_list)
@@ -108,7 +108,7 @@ public class OrderListAct extends BaseActivity implements IHttpCallback{
 	
 	private void getData(){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERS);
+		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERS_LIST_FOR_BA);
 		task.setParams(new String[]{start + ""});
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
@@ -201,7 +201,7 @@ public class OrderListAct extends BaseActivity implements IHttpCallback{
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						Intent intent  = new Intent(OrderListAct.this, MyItemAct_.class);
-						intent.putExtra("orderId", infos.get(position).Id);
+						intent.putExtra("orderId", infos.get(position).OrderIdentifier);
 						intent.putExtra("orderTitle", infos.get(position).OrderIdentifier);
 						intent.putExtra("flag", OrderListAct.FLAG);
 						startActivityForResult(intent,1);
@@ -241,7 +241,7 @@ public class OrderListAct extends BaseActivity implements IHttpCallback{
 							@Override
 							public void onClick(View v) {
 								// TODO Auto-generated method stub
-								getUseItemData(itemInfo.Id, infos.get(position).Id);
+								getUseItemData(itemInfo.Id, infos.get(position).OrderIdentifier);
 								dialog.cancel();
 							}
 						});
@@ -261,22 +261,22 @@ public class OrderListAct extends BaseActivity implements IHttpCallback{
 
 	private void getUseItemData(String ItemId , String OrderId){
 	progressbar.setVisibility(View.VISIBLE);
-	IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS_CONSUMEBYORDER);
-	task.setParams(new String[]{ItemId , OrderId});
-	HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-		
-		@Override
-		public void onGetData(Object data) {
-			// TODO Auto-generated method stub
-			handler.sendMessage(handler.obtainMessage(3, data));
-		}
-		
-		@Override
-		public void onError(Object reason) {
-			// TODO Auto-generated method stub
-			handler.sendMessage(handler.obtainMessage(-3, reason));
-		}
-	}, task);
+//	IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS_CONSUMEBYORDER);
+//	task.setParams(new String[]{ItemId , OrderId});
+//	HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//		
+//		@Override
+//		public void onGetData(Object data) {
+//			// TODO Auto-generated method stub
+//			handler.sendMessage(handler.obtainMessage(3, data));
+//		}
+//		
+//		@Override
+//		public void onError(Object reason) {
+//			// TODO Auto-generated method stub
+//			handler.sendMessage(handler.obtainMessage(-3, reason));
+//		}
+//	}, task);
 }
 
 
@@ -362,23 +362,23 @@ public class OrderListAct extends BaseActivity implements IHttpCallback{
 	};
 	
 	private void getForItemData(String ItemId,String PageIndex){
-		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERS_FORITEM);
-		task.setParams(new String[]{ItemId,PageIndex});
-		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-			
-			@Override
-			public void onGetData(Object data) {
-				// TODO Auto-generated method stub
-				handler.sendMessage(handler.obtainMessage(1, data));
-			}
-			
-			@Override
-			public void onError(Object reason) {
-				// TODO Auto-generated method stub
-				handler.sendMessage(handler.obtainMessage(-1, reason));
-			}
-		}, task);
+//		progressbar.setVisibility(View.VISIBLE);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERS_FORITEM);
+//		task.setParams(new String[]{ItemId,PageIndex});
+//		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//			
+//			@Override
+//			public void onGetData(Object data) {
+//				// TODO Auto-generated method stub
+//				handler.sendMessage(handler.obtainMessage(1, data));
+//			}
+//			
+//			@Override
+//			public void onError(Object reason) {
+//				// TODO Auto-generated method stub
+//				handler.sendMessage(handler.obtainMessage(-1, reason));
+//			}
+//		}, task);
 	}
 	
 	private void initListView(){		

@@ -26,7 +26,7 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.RefundInfo;
+import com.widen.http.model.RefundInfo;
 import com.widen.product.BaseActivity;
 import com.widen.util.Util;
 import com.widen.widget.MyListView;
@@ -344,10 +344,10 @@ public class TimeLineProductDetailAct extends BaseActivity implements IHttpCallb
 	private void getData(){
 		progressbar.setVisibility(View.VISIBLE);
 		
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.TIMELINE_REFUNDINFO);
-		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
-		task.setParams(new String[]{Id});
-		HttpTaskFactory.getFactory().sendRequest(this, task);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.TIMELINE_REFUNDINFO);
+//		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
+//		task.setParams(new String[]{Id});
+//		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 	
 	private Handler handler = new Handler(){

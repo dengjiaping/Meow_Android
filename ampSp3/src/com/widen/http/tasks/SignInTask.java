@@ -4,17 +4,17 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.widen.http.IHttpTask;
-import com.widen.http.info.SignInfo;
+import com.widen.http.model.SignInfo;
 import com.widen.util.Constant;
 import com.widen.util.Util;
 
-public class SignInTask implements IHttpTask{
+public class SignInTask extends IHttpTask{
 
 	private String[] strs;
 	@Override
 	public String getSubUrl() {
 		// TODO Auto-generated method stub
-		return "Api/V1/Passport/Auth/SignIn";
+		return "/User/SignIn";
 	}
 
 	@Override
@@ -31,8 +31,18 @@ public class SignInTask implements IHttpTask{
 
 	@Override
 	public String getParams() {
-		// TODO Auto-generated method stub
-		return String.format("Name=%s&Password=%s",strs[0],strs[1]);
+		
+		try{
+			
+			JSONObject jobject = new JSONObject();
+			jobject.put("Name", strs[0]);
+			jobject.put("Password", strs[1]);
+			return jobject.toString();
+			
+		}catch(Exception e){
+			return "";
+		}
+		
 	}
 
 	@Override
@@ -59,16 +69,6 @@ public class SignInTask implements IHttpTask{
 		return null;
 	}
 
-	@Override
-	public boolean isNewApi() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public String getContentType() {
-		// TODO Auto-generated method stub
-		return "application/x-www-form-urlencoded; charset=utf-8";
-	}
+	
 
 }

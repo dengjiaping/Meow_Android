@@ -26,7 +26,7 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.VerifyInfo;
+import com.widen.http.model.VerifyInfo;
 import com.widen.product.BaseActivity;
 @EActivity(R.layout.forget_password_step_two)
 public class ForgetPasswordStepTwoAct extends BaseActivity implements IHttpCallback{

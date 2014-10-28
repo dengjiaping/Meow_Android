@@ -28,8 +28,8 @@ public final class RegisterStepThreeAct_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
-    public final static String TOKEN_EXTRA = "Token";
     public final static String PHONE_EXTRA = "phone";
+    public final static String TOKEN_EXTRA = "Token";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,25 +73,10 @@ public final class RegisterStepThreeAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        comfirm_password = ((EditText) hasViews.findViewById(id.comfirm_password));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        comfirm_password = ((EditText) hasViews.findViewById(id.comfirm_password));
         password = ((EditText) hasViews.findViewById(id.password));
         txt = ((TextView) hasViews.findViewById(id.txt));
-        {
-            View view = hasViews.findViewById(id.sub);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        RegisterStepThreeAct_.this.sub();
-                    }
-
-                }
-                );
-            }
-        }
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {
@@ -101,6 +86,21 @@ public final class RegisterStepThreeAct_
                     @Override
                     public void onClick(View view) {
                         RegisterStepThreeAct_.this.back();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.sub);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        RegisterStepThreeAct_.this.sub();
                     }
 
                 }
@@ -128,11 +128,11 @@ public final class RegisterStepThreeAct_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey(TOKEN_EXTRA)) {
-                Token = extras_.getString(TOKEN_EXTRA);
-            }
             if (extras_.containsKey(PHONE_EXTRA)) {
                 phone = extras_.getString(PHONE_EXTRA);
+            }
+            if (extras_.containsKey(TOKEN_EXTRA)) {
+                Token = extras_.getString(TOKEN_EXTRA);
             }
         }
     }
@@ -185,13 +185,13 @@ public final class RegisterStepThreeAct_
             }
         }
 
-        public RegisterStepThreeAct_.IntentBuilder_ Token(String Token) {
-            intent_.putExtra(TOKEN_EXTRA, Token);
+        public RegisterStepThreeAct_.IntentBuilder_ phone(String phone) {
+            intent_.putExtra(PHONE_EXTRA, phone);
             return this;
         }
 
-        public RegisterStepThreeAct_.IntentBuilder_ phone(String phone) {
-            intent_.putExtra(PHONE_EXTRA, phone);
+        public RegisterStepThreeAct_.IntentBuilder_ Token(String Token) {
+            intent_.putExtra(TOKEN_EXTRA, Token);
             return this;
         }
 

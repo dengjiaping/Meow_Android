@@ -201,6 +201,35 @@ public class Util {
 	}
 	
 	
+	public static float getJsonFloat(JSONObject object , String value){
+		float name = 0;
+		try {
+		if(object.has(value)){
+			
+				name = (float)object.getDouble(value);
+			
+		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return name;
+	}
+	
+	
+	public static int getJsonInt(JSONObject object , String value){
+		int name = 0;
+		try {
+		if(object.has(value)){
+			
+				name = object.getInt(value);
+			
+		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return name;
+	}
+	
 	public static Boolean getJsonBoolean(JSONObject object , String value){
 		Boolean name = false;
 		try {
@@ -231,13 +260,13 @@ public class Util {
 	      return flag;  
 	}  
 	
-	public static String toJpgUrl(String url){  
-	      
-		  StringBuilder sb = new StringBuilder();
-		  sb.append(HttpConfig.URL_SERVER_NEW_API).deleteCharAt(HttpConfig.URL_SERVER_NEW_API.length()-1).append(url);
-		
-	      return sb.toString();  
-	}  
+//	public static String toJpgUrl(String url){  
+//	      
+//		  StringBuilder sb = new StringBuilder();
+//		  sb.append(HttpConfig.URL_SERVER_NEW_API).deleteCharAt(HttpConfig.URL_SERVER_NEW_API.length()-1).append(url);
+//		
+//	      return sb.toString();  
+//	}  
 	
 	
 	public static boolean check(String regEx,String data){  

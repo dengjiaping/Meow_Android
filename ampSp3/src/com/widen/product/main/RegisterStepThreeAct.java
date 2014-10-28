@@ -55,7 +55,7 @@ public class RegisterStepThreeAct extends BaseActivity implements IHttpCallback{
 	@Click
 	public void txt(){
 		Intent intent = new Intent(RegisterStepThreeAct.this,BannerWebViewAct_.class);
-		intent.putExtra("url", HttpConfig.URL_SERVER_NEW_API + "app/agreement.cshtml" );//"http://mdev.jinyinmao.com.cn/app/agreement.cshtml"
+		intent.putExtra("url", HttpConfig.CURRENT_HOST + "/app/agreement/register" );
 		startActivity(intent);
 	}
 	
