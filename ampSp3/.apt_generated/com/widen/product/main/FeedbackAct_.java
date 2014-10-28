@@ -70,8 +70,8 @@ public final class FeedbackAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        send = ((Button) hasViews.findViewById(id.send));
         content = ((EditText) hasViews.findViewById(id.content));
+        send = ((Button) hasViews.findViewById(id.send));
         number = ((TextView) hasViews.findViewById(id.number));
         title = ((EditText) hasViews.findViewById(id.title));
         {

@@ -82,6 +82,21 @@ public final class MoreFragment_
             }
         }
         {
+            View view = hasViews.findViewById(com.widen.R.id.register);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MoreFragment_.this.register();
+                    }
+
+                }
+                );
+            }
+        }
+        {
             View view = hasViews.findViewById(com.widen.R.id.order_lay);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -90,21 +105,6 @@ public final class MoreFragment_
                     @Override
                     public void onClick(View view) {
                         MoreFragment_.this.order_lay();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(com.widen.R.id.account_lay);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MoreFragment_.this.account_lay();
                     }
 
                 }
@@ -127,14 +127,14 @@ public final class MoreFragment_
             }
         }
         {
-            View view = hasViews.findViewById(com.widen.R.id.register);
+            View view = hasViews.findViewById(com.widen.R.id.account_lay);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        MoreFragment_.this.register();
+                        MoreFragment_.this.account_lay();
                     }
 
                 }

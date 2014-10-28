@@ -72,12 +72,12 @@ public final class LoginAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        error_txt = ((TextView) hasViews.findViewById(id.error_txt));
         error_lay = ((FrameLayout) hasViews.findViewById(id.error_lay));
+        password = ((EditText) hasViews.findViewById(id.password));
+        error_txt = ((TextView) hasViews.findViewById(id.error_txt));
+        forget_icon = ((ImageView) hasViews.findViewById(id.forget_icon));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         phone = ((EditText) hasViews.findViewById(id.phone));
-        forget_icon = ((ImageView) hasViews.findViewById(id.forget_icon));
-        password = ((EditText) hasViews.findViewById(id.password));
         {
             View view = hasViews.findViewById(id.register);
             if (view!= null) {
@@ -109,21 +109,6 @@ public final class LoginAct_
             }
         }
         {
-            View view = hasViews.findViewById(id.login);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        LoginAct_.this.login();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(id.forget_icon);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -132,6 +117,21 @@ public final class LoginAct_
                     @Override
                     public void onClick(View view) {
                         LoginAct_.this.forget_icon();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.login);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        LoginAct_.this.login();
                     }
 
                 }

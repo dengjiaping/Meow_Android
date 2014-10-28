@@ -78,10 +78,10 @@ public final class MainAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        product = ((RadioButton) hasViews.findViewById(id.product));
-        home = ((RadioButton) hasViews.findViewById(id.home));
-        radioGroup = ((RadioGroup) hasViews.findViewById(id.radioGroup));
         more = ((RadioButton) hasViews.findViewById(id.more));
+        home = ((RadioButton) hasViews.findViewById(id.home));
+        product = ((RadioButton) hasViews.findViewById(id.product));
+        radioGroup = ((RadioGroup) hasViews.findViewById(id.radioGroup));
         afterViews();
     }
 

@@ -74,24 +74,9 @@ public final class ForgetPasswordStepThreeAct_
     @Override
     public void onViewChanged(HasViews hasViews) {
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        comfirm_password = ((EditText) hasViews.findViewById(id.comfirm_password));
         txt = ((TextView) hasViews.findViewById(id.txt));
         password = ((EditText) hasViews.findViewById(id.password));
-        comfirm_password = ((EditText) hasViews.findViewById(id.comfirm_password));
-        {
-            View view = hasViews.findViewById(id.sub);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ForgetPasswordStepThreeAct_.this.sub();
-                    }
-
-                }
-                );
-            }
-        }
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {
@@ -101,6 +86,21 @@ public final class ForgetPasswordStepThreeAct_
                     @Override
                     public void onClick(View view) {
                         ForgetPasswordStepThreeAct_.this.back();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.sub);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ForgetPasswordStepThreeAct_.this.sub();
                     }
 
                 }

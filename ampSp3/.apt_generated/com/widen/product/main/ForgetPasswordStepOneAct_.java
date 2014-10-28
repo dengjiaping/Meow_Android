@@ -70,10 +70,10 @@ public final class ForgetPasswordStepOneAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        sub = ((Button) hasViews.findViewById(id.sub));
-        phone = ((EditText) hasViews.findViewById(id.phone));
-        back = ((Button) hasViews.findViewById(id.back));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        back = ((Button) hasViews.findViewById(id.back));
+        phone = ((EditText) hasViews.findViewById(id.phone));
+        sub = ((Button) hasViews.findViewById(id.sub));
         {
             View view = hasViews.findViewById(id.sub);
             if (view!= null) {

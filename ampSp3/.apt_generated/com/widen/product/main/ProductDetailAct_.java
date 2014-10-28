@@ -76,33 +76,33 @@ public final class ProductDetailAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        over_lay = ((FrameLayout) hasViews.findViewById(id.over_lay));
-        SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
-        Name = ((TextView) hasViews.findViewById(id.Name));
-        cat_left_icon = ((ImageView) hasViews.findViewById(id.cat_left_icon));
-        flag_icon = ((ImageView) hasViews.findViewById(id.flag_icon));
-        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
-        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
-        seekbar_blue = ((SeekBar) hasViews.findViewById(id.seekbar_blue));
-        MinNumber = ((TextView) hasViews.findViewById(id.MinNumber));
-        SellingStatus_txt = ((TextView) hasViews.findViewById(id.SellingStatus_txt));
-        Unit = ((TextView) hasViews.findViewById(id.Unit));
-        buy_number_lay = ((FrameLayout) hasViews.findViewById(id.buy_number_lay));
-        PubEnd = ((TextView) hasViews.findViewById(id.PubEnd));
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
-        Yield = ((TextView) hasViews.findViewById(id.Yield));
-        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
-        number = ((EditText) hasViews.findViewById(id.number));
-        MaxNumber = ((TextView) hasViews.findViewById(id.MaxNumber));
-        income = ((TextView) hasViews.findViewById(id.income));
-        PubBegin = ((TextView) hasViews.findViewById(id.PubBegin));
-        SellingStatus_icon = ((ImageView) hasViews.findViewById(id.SellingStatus_icon));
-        seekbar_red = ((SeekBar) hasViews.findViewById(id.seekbar_red));
         yield_star_icon = ((ImageView) hasViews.findViewById(id.yield_star_icon));
+        ExtraYield = ((TextView) hasViews.findViewById(id.ExtraYield));
+        SellingStatus_txt = ((TextView) hasViews.findViewById(id.SellingStatus_txt));
+        number = ((EditText) hasViews.findViewById(id.number));
+        over_lay = ((FrameLayout) hasViews.findViewById(id.over_lay));
+        MaxNumber = ((TextView) hasViews.findViewById(id.MaxNumber));
+        Yield = ((TextView) hasViews.findViewById(id.Yield));
+        PubEnd = ((TextView) hasViews.findViewById(id.PubEnd));
+        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
+        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
+        Unit = ((TextView) hasViews.findViewById(id.Unit));
         Unit_txt = ((TextView) hasViews.findViewById(id.Unit_txt));
         Duration = ((TextView) hasViews.findViewById(id.Duration));
-        ExtraYield = ((TextView) hasViews.findViewById(id.ExtraYield));
+        income = ((TextView) hasViews.findViewById(id.income));
+        seekbar_red = ((SeekBar) hasViews.findViewById(id.seekbar_red));
+        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
+        Name = ((TextView) hasViews.findViewById(id.Name));
+        cat_left_icon = ((ImageView) hasViews.findViewById(id.cat_left_icon));
+        SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        flag_icon = ((ImageView) hasViews.findViewById(id.flag_icon));
+        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
+        SellingStatus_icon = ((ImageView) hasViews.findViewById(id.SellingStatus_icon));
+        MinNumber = ((TextView) hasViews.findViewById(id.MinNumber));
+        seekbar_blue = ((SeekBar) hasViews.findViewById(id.seekbar_blue));
+        buy_number_lay = ((FrameLayout) hasViews.findViewById(id.buy_number_lay));
+        PubBegin = ((TextView) hasViews.findViewById(id.PubBegin));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {

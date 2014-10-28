@@ -74,38 +74,23 @@ public final class OrderDetailAct_
     @Override
     public void onViewChanged(HasViews hasViews) {
         used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
+        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
+        Yield = ((TextView) hasViews.findViewById(id.Yield));
+        BankName = ((TextView) hasViews.findViewById(id.BankName));
+        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
         SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
-        Price = ((TextView) hasViews.findViewById(id.Price));
         Duration = ((TextView) hasViews.findViewById(id.Duration));
-        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
         Name = ((TextView) hasViews.findViewById(id.Name));
         item_txt = ((TextView) hasViews.findViewById(id.item_txt));
-        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
-        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
-        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
-        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
-        CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
-        OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
-        BankName = ((TextView) hasViews.findViewById(id.BankName));
         no_use_item_lay = ((FrameLayout) hasViews.findViewById(id.no_use_item_lay));
-        Yield = ((TextView) hasViews.findViewById(id.Yield));
-        {
-            View view = hasViews.findViewById(id.back);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        OrderDetailAct_.this.back();
-                    }
-
-                }
-                );
-            }
-        }
+        OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
+        Price = ((TextView) hasViews.findViewById(id.Price));
+        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
+        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
+        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
         {
             View view = hasViews.findViewById(id.no_use_item_lay);
             if (view!= null) {
@@ -115,6 +100,21 @@ public final class OrderDetailAct_
                     @Override
                     public void onClick(View view) {
                         OrderDetailAct_.this.no_use_item_lay();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.back);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        OrderDetailAct_.this.back();
                     }
 
                 }

@@ -70,21 +70,6 @@ public final class AboutAct_
     public void onViewChanged(HasViews hasViews) {
         about = ((TextView) hasViews.findViewById(id.about));
         {
-            View view = hasViews.findViewById(id.back);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        AboutAct_.this.back();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(id.phone);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -93,6 +78,21 @@ public final class AboutAct_
                     @Override
                     public void onClick(View view) {
                         AboutAct_.this.phone();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.back);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        AboutAct_.this.back();
                     }
 
                 }
