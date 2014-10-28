@@ -172,11 +172,11 @@
                     <Button
                         android:id="@+id/makeMoney"
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="45dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="30dp"
-                        android:background="@drawable/yellow_btn_bg"
+                        android:background="@drawable/yellow_main_btn"
                         android:text="@string/make_money"
                         android:textColor="@color/default_white"
                         android:textSize="21sp" />

@@ -26,7 +26,7 @@
         android:orientation="vertical" >
         <View 
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/line_gray"
                 />
 
@@ -71,7 +71,11 @@
             android:id="@+id/order_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip" >
+            android:paddingTop="11dp" 
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -91,17 +95,20 @@
         </FrameLayout>
         <View 
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/line_gray"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 />
 
         <FrameLayout
             android:id="@+id/account_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip" >
+            android:paddingTop="11dp" 
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
 
             <TextView
                 android:textSize="15sp"
@@ -120,17 +127,20 @@
         </FrameLayout>
         <View 
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/line_gray"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 />
         
         <FrameLayout
             android:id="@+id/bankcard_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dip" >
+            android:paddingTop="11dp" 
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
 
             <TextView
                 android:textSize="15sp"
@@ -149,7 +159,7 @@
         </FrameLayout>
         <View 
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/line_gray"
                 />
 
@@ -163,7 +173,7 @@
         android:orientation="vertical" >
         <View 
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/line_gray"
                 />
         
@@ -172,7 +182,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/list_color"
-            android:padding="10dip" >
+            android:paddingTop="11dp" 
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
 
             <TextView
                 android:textSize="15sp"
@@ -191,7 +204,7 @@
         </FrameLayout>
          <View 
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/line_gray"
                 />
 

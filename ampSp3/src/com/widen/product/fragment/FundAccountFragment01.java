@@ -1,6 +1,7 @@
 package com.widen.product.fragment;
 
 import com.widen.R;
+import com.widen.product.account.PayPwdSettingActivity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -44,7 +45,7 @@ public class FundAccountFragment01 extends Fragment implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.once_bind_btn:
-
+			PayPwdSettingActivity.startActivity(getActivity());
 			break;
 		case R.id.know_more_tv:
 

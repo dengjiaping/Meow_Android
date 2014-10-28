@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/bg_color"
     android:paddingTop="45dp" >
 
     <ImageView
@@ -58,7 +59,7 @@
         android:layout_above="@id/bottom"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="45dp"
-        android:background="@drawable/yellow_big_corner"
+        android:background="@drawable/yellow_big_corner_btn"
         android:text="@string/once_bind"
         android:textColor="@color/default_white"
         android:textSize="20sp" />

@@ -20,7 +20,6 @@ public class FundAccountActivity extends BaseFragmentAct implements
 	public static final int NO_BUY = 0x03; // 已认证但未购买产品
 	public static final int HAS_BUY = 0x04; // 已认证且购买过产品
 
-	private FrameLayout container;
 	private int type;
 
 	public static void startActivity(Activity activity, int type) {
@@ -39,7 +38,6 @@ public class FundAccountActivity extends BaseFragmentAct implements
 		((TextView) findViewById(R.id.title_tv)).setText(getResources()
 				.getString(R.string.fund_account));
 
-		container = (FrameLayout) findViewById(R.id.fund_container);
 		findViewById(R.id.back).setOnClickListener(this);
 
 		FragmentTransaction transaction = getSupportFragmentManager()

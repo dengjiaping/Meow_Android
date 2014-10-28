@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="50dp"
             android:text="@string/no_buy"
             android:textColor="@color/text_essential"
@@ -29,7 +29,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="15dp"
             android:background="@color/line_gray" />
 
         <TextView
@@ -39,9 +39,9 @@
             android:drawablePadding="1dp"
             android:drawableRight="@drawable/navi_arrow"
             android:gravity="right|center_vertical"
-            android:paddingBottom="10dp"
-            android:paddingRight="12dp"
-            android:paddingTop="10dp"
+            android:paddingBottom="11dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp"
             android:text="@string/look_list"
             android:textColor="@color/yellow_link"
             android:textSize="15sp" />
@@ -63,14 +63,14 @@
         android:layout_height="wrap_content"
         android:background="@color/list_color"
         android:orientation="vertical"
-        android:paddingLeft="12dp" >
+        android:paddingLeft="15dp" >
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingRight="12dp"
-            android:paddingTop="10dp" >
+            android:paddingBottom="11dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,9 +96,9 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingRight="12dp"
-            android:paddingTop="10dp" >
+            android:paddingBottom="11dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -124,9 +124,9 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingRight="12dp"
-            android:paddingTop="10dp" >
+            android:paddingBottom="11dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
 
             <TextView
                 android:layout_width="wrap_content"

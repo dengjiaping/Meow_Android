@@ -41,10 +41,27 @@
     <string name="look_list">查看产品列表</string>
     <string name="real_verify">实名认证</string>
     <string name="phone_num">手机号码</string>
+    <string name="phone_number">手机号码:</string>
     <string name="id_card">身份证</string>
     <string name="expect_income">预期收益</string>
     <string name="input_fund">在投资金：%1$d元</string>
     <string name="obtain_income">已获收益：%1$d元</string>
     <string name="yuan">元</string>
+    <string name="set_pay_pwd">设置支付密码</string>
+    <string name="deduct_alert">提交认证后，易联会从您的银行卡中扣除1~5元的随机金额，此笔扣款会在认证完成后归还于原银行。</string>
+    <string name="pay_pwd_rule">8~18位字符、数字或字母，区分大小写</string>
+    <string name="input_pay_pwd">输入支付密码</string>
+    <string name="confirm_pay_pwd">确认支付密码</string>
+    <string name="look">查看</string>
+    <string name="sign_protocol">《认证签约协议》</string>
+    <string name="agree_and_commit">同意协议并提交</string>
+    <string name="identity_info">身份信息</string>
+    <string name="name">姓名</string>
+    <string name="input_name">请填写姓名</string>
+    <string name="id_card_type">证件类型</string>
+    <string name="passport">护照</string>
+    <string name="military_card">军人证</string>
+    <string name="id_card_num">证件号码</string>
+    <string name="next">下一步</string>
 
 </resources>

@@ -1,152 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
-    
-    >
+    android:background="@drawable/bg" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" 
-    >
-    
-    <FrameLayout
+        <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="48dp"
             android:background="@drawable/top_bg" >
 
             <Button
                 android:id="@+id/back"
-          		android:layout_width="wrap_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
                 android:background="@drawable/back_bg" />
 
             <TextView
-                android:text="关于金银猫"
                 style="@style/titleStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="关于金银猫" />
         </FrameLayout>
 
-    
-    <FrameLayout 
-        android:layout_marginTop="10dip"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/more_top_bg"
-        android:padding="10dip"
-        >
-         <TextView
-                android:text="公司网站"
-                android:layout_gravity="center_vertical|left"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_color"
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-         <TextView
-              android:textColor="@color/grey"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:text="公司网站" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
                 android:text="http://jinyinmao.com.cn"
-                android:layout_gravity="center_vertical|right"
+                android:textColor="@color/grey" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_color"
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-        
-    </FrameLayout>
-    
-      <FrameLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/more_middle_bg"
-        android:padding="10dip"
-        >
-         <TextView
-                android:text="客服热线"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-         <TextView
-              android:textColor="@color/blue_link"
-                android:text="4008-556-333"
+                android:text="客服热线" />
+
+            <TextView
                 android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
+                android:text="4008-556-333"
+                android:textColor="@color/blue_link" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_color"
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-        
-    </FrameLayout>
-    
-      
-      <FrameLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/more_middle_bg"
-        android:padding="10dip"
-        >
-         <TextView
-                android:text="新浪微博"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
+                android:text="新浪微博" />
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-         <TextView
-              android:textColor="@color/grey"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
                 android:text="金银猫"
-                android:layout_gravity="center_vertical|right"
+                android:textColor="@color/grey" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/list_color"
+            android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-        
-    </FrameLayout>
-    
-      <FrameLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/more_middle_bg"
-        android:padding="10dip"
-        >
-         <TextView
-                android:text="微信服务号"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
+                android:text="微信服务号" />
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-         <TextView
-             android:textColor="@color/grey"
-                android:text="金银猫服务号"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        
-        
-    </FrameLayout>
-    
-    
-    
-</LinearLayout>
+                android:text="金银猫服务号"
+                android:textColor="@color/grey" />
+        </FrameLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+    </LinearLayout>
 
-
-<TextView 
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/about"
-    android:layout_gravity="center_horizontal|bottom"
-    android:layout_marginBottom="10dip"
-    android:textColor="@color/zi_grey"
-    
-    />
-
-
-
-
-
-
-
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="10dip"
+        android:textColor="@color/zi_grey" />
 
 </FrameLayout>
