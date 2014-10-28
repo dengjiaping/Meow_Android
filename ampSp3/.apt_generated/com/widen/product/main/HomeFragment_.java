@@ -68,15 +68,15 @@ public final class HomeFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        Yield = ((TextView) hasViews.findViewById(com.widen.R.id.Yield));
-        progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
-        horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
-        BankName = ((TextView) hasViews.findViewById(com.widen.R.id.BankName));
-        Unit = ((TextView) hasViews.findViewById(com.widen.R.id.Unit));
-        banners_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.banners_lay));
         swipeRefreshLayout = ((SwipeRefreshLayout) hasViews.findViewById(com.widen.R.id.swipeRefreshLayout));
-        Name = ((TextView) hasViews.findViewById(com.widen.R.id.Name));
+        progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
+        BankName = ((TextView) hasViews.findViewById(com.widen.R.id.BankName));
+        Yield = ((TextView) hasViews.findViewById(com.widen.R.id.Yield));
         Duration = ((TextView) hasViews.findViewById(com.widen.R.id.Duration));
+        Unit = ((TextView) hasViews.findViewById(com.widen.R.id.Unit));
+        Name = ((TextView) hasViews.findViewById(com.widen.R.id.Name));
+        banners_lay = ((LinearLayout) hasViews.findViewById(com.widen.R.id.banners_lay));
+        horizontalScrollView = ((HorizontalScrollView) hasViews.findViewById(com.widen.R.id.horizontalScrollView));
         {
             View view = hasViews.findViewById(com.widen.R.id.login);
             if (view!= null) {
