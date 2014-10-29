@@ -64,5 +64,7 @@
 	<color name="list_color">#fafafa</color>
 	<color name="blue_link">#0061ff</color>
 	<color name="yellow_link">#eabe37</color>
+	<color name="button_gray">#c8d3d9</color>
+	<color name="button_gray_clicked">#b1c1ca</color>
 	
 </resources>

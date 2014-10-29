@@ -304,14 +304,14 @@ public class HomeFragment extends Fragment implements IHttpCallback,
 	}
 
 	private void getData() {
-		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(
-				HttpTaskFactory.GET_BANNER);
-		HttpTaskFactory.getFactory().sendRequest(this, task);
-		
-		task = HttpTaskFactory.getFactory().createTask(
-				HttpTaskFactory.GET_TOP_PRODUCT_FOR_BA);
-		HttpTaskFactory.getFactory().sendRequest(this, task);
+//		progressbar.setVisibility(View.VISIBLE);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(
+//				HttpTaskFactory.GET_BANNER);
+//		HttpTaskFactory.getFactory().sendRequest(this, task);
+//		
+//		task = HttpTaskFactory.getFactory().createTask(
+//				HttpTaskFactory.GET_TOP_PRODUCT_FOR_BA);
+//		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 
 	private Handler handler = new Handler() {

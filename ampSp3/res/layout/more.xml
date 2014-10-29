@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/bg_color"
     android:orientation="vertical" >
 
     <FrameLayout
@@ -22,20 +22,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dip"
-        android:background="@color/list_color"
+        android:background="@color/default_white"
         android:orientation="vertical" >
-        <View 
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_gray"
-                />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
 
         <FrameLayout
-            android:visibility="gone"
             android:id="@+id/my_item_lay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dip" >
+            android:padding="10dip"
+            android:visibility="gone" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -48,121 +48,117 @@
                     android:text="我的道具" />
 
                 <ImageView
-                    android:contentDescription="@string/empty"
                     android:id="@+id/red_point"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dip"
+                    android:contentDescription="@string/empty"
                     android:src="@drawable/red_point"
                     android:visibility="gone" />
             </LinearLayout>
 
             <ImageView
-                android:contentDescription="@string/empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
+                android:contentDescription="@string/empty"
                 android:src="@drawable/navi_arrow" />
-
         </FrameLayout>
-        
+
         <FrameLayout
             android:id="@+id/order_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="11dp" 
             android:paddingBottom="11dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            >
+            android:paddingTop="11dp" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
-                android:textSize="15sp"
+                android:text="@string/order_list"
                 android:textColor="@color/text_essential"
-                android:text="@string/order_list" />
+                android:textSize="15sp" />
 
             <ImageView
-                android:contentDescription="@string/empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
+                android:contentDescription="@string/empty"
                 android:src="@drawable/navi_arrow" />
-            
         </FrameLayout>
-        <View 
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_gray"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/line_gray" />
 
         <FrameLayout
             android:id="@+id/account_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="11dp" 
             android:paddingBottom="11dp"
             android:paddingLeft="15dp"
-            android:paddingRight="15dp" >
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
 
             <TextView
-                android:textSize="15sp"
-                android:textColor="@color/text_essential"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
-                android:text="@string/fund_account" />
+                android:text="@string/fund_account"
+                android:textColor="@color/text_essential"
+                android:textSize="15sp" />
 
             <ImageView
-                android:contentDescription="@string/empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
+                android:contentDescription="@string/empty"
                 android:src="@drawable/navi_arrow" />
         </FrameLayout>
-        <View 
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_gray"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                />
-        
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/line_gray" />
+
         <FrameLayout
             android:id="@+id/bankcard_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="11dp" 
             android:paddingBottom="11dp"
             android:paddingLeft="15dp"
-            android:paddingRight="15dp" >
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
 
             <TextView
-                android:textSize="15sp"
-                android:textColor="@color/text_essential"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
-                android:text="@string/my_bankcard" />
+                android:text="@string/my_bankcard"
+                android:textColor="@color/text_essential"
+                android:textSize="15sp" />
 
             <ImageView
-                android:contentDescription="@string/empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
+                android:contentDescription="@string/empty"
                 android:src="@drawable/navi_arrow" />
         </FrameLayout>
-        <View 
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_gray"
-                />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
     </LinearLayout>
 
     <LinearLayout
@@ -171,105 +167,115 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dip"
         android:orientation="vertical" >
-        <View 
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_gray"
-                />
-        
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+
         <FrameLayout
             android:id="@+id/setting_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/list_color"
-            android:paddingTop="11dp" 
+            android:background="@color/default_white"
             android:paddingBottom="11dp"
             android:paddingLeft="15dp"
-            android:paddingRight="15dp" >
+            android:paddingRight="15dp"
+            android:paddingTop="11dp" >
 
             <TextView
-                android:textSize="15sp"
-                android:textColor="@color/text_essential"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|left"
-                android:text="@string/setting" />
+                android:text="@string/setting"
+                android:textColor="@color/text_essential"
+                android:textSize="15sp" />
 
             <ImageView
-                android:contentDescription="@string/empty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
+                android:contentDescription="@string/empty"
                 android:src="@drawable/navi_arrow" />
         </FrameLayout>
-         <View 
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/line_gray"
-                />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/no_login_lay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dip"
-        android:orientation="vertical" >
+        android:background="@color/default_white"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp" >
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dip"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal" >
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
 
             <Button
                 android:id="@+id/login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/more_login_bg"
-                android:text="登录"
-                android:textColor="@color/white" />
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_main_btn"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
-                android:background="@drawable/more_register_bg"
-                android:text="注册"
-                android:textColor="@color/white" />
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/gray_main_btn"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dip"
-            android:text="更多功能只在一&apos;&apos;登&apos;&apos;之遥!"
-            android:textColor="@color/grey" />
+            android:layout_marginTop="12dp"
+            android:text="@string/login_alert"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/login_lay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dip"
-        android:orientation="vertical"
+        android:background="@color/default_white"
+        android:paddingBottom="30dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="30dp"
         android:visibility="gone" >
 
         <Button
             android:id="@+id/login_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:background="@drawable/register_btn_bg"
-            android:text="登出"
-            android:textColor="@color/white" />
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/gray_main_btn"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </LinearLayout>

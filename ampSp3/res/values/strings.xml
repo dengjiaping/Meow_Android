@@ -9,6 +9,7 @@
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="empty"></string>
     <string name="login">登录</string>
+    <string name="register">注册</string>
     <string name="by">由</string>
     <string name="cash">无条件兑付</string>
     <string name="percent">%</string>
@@ -32,6 +33,7 @@
     <string name="know_more">了解更多</string>
     <string name="add_new_card">添加新银行卡</string>
     <string name="user">用户：</string>
+    <string name="user_name">用户名</string>
     <string name="no_real_01">对不起，您还不是实名认证用户</string>
     <string name="no_real_02">认证并绑定银行卡后即可进行购买！</string>
     <string name="once_bind">马上绑定</string>
@@ -79,5 +81,8 @@
     <string name="look_and_wait">边逛边等</string>
     <string name="question_consult">如有问题请垂询：</string>
     <string name="jym_phone">4008&#8211;556&#8211;333</string>
+    <string name="password">密码</string>
+    <string name="logout">登出</string>
+    <string name="login_alert">更多功能只在一 “登” 之遥!</string>
 
 </resources>

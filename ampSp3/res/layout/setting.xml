@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/bg_color"
     android:orientation="vertical" >
 
     <include layout="@layout/title_layout" />
@@ -24,7 +24,7 @@
             android:id="@+id/security_setting_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/list_color"
+            android:background="@color/default_white"
             android:paddingTop="11dp" 
             android:paddingBottom="11dp"
             android:paddingLeft="15dp"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@color/list_color"
+        android:background="@color/default_white"
         android:orientation="vertical" >
 
         <FrameLayout

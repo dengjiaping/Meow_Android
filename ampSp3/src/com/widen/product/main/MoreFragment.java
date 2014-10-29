@@ -21,6 +21,7 @@ import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
 import com.widen.http.model.ItemsCountInfo;
+import com.widen.product.account.FundAccountActivity;
 import com.widen.product.account.MyBankCardActivity;
 import com.widen.product.account.SettingActivity;
 
@@ -63,9 +64,9 @@ public class MoreFragment extends Fragment implements IHttpCallback,
 	}
 
 	private void getData() {
-//		IHttpTask task = HttpTaskFactory.getFactory().createTask(
-//				HttpTaskFactory.ITEMS_COUNT);
-//		HttpTaskFactory.getFactory().sendRequest(this, task);
+		// IHttpTask task = HttpTaskFactory.getFactory().createTask(
+		// HttpTaskFactory.ITEMS_COUNT);
+		// HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 
 	@Click
@@ -130,8 +131,7 @@ public class MoreFragment extends Fragment implements IHttpCallback,
 	@Click
 	public void account_lay() {
 		if (MyApplication.appContext.isLogin()) {
-			startActivityForResult(new Intent(getActivity(),
-					UserCountAct_.class), UserCountAct.USERCOUNTACT);
+			FundAccountActivity.startActivity(getActivity(), 1);
 		} else {
 			((MainAct) getActivity()).flag = FLAG;
 			startActivity(new Intent(getActivity(), LoginAct_.class));
@@ -200,8 +200,13 @@ public class MoreFragment extends Fragment implements IHttpCallback,
 			startActivity(intent);
 			break;
 		case R.id.bankcard_lay:
-			Intent it=new Intent(getActivity(), MyBankCardActivity.class);
-			startActivity(it);
+			if (MyApplication.appContext.isLogin()) {
+				Intent it = new Intent(getActivity(), MyBankCardActivity.class);
+				startActivity(it);
+			} else {
+				((MainAct) getActivity()).flag = FLAG;
+				startActivity(new Intent(getActivity(), LoginAct_.class));
+			}
 			break;
 		default:
 			break;
