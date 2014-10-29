@@ -560,7 +560,6 @@ public class HttpTaskFactory {
 				}
 
 				if (code == 204) {
-					cb.onGetData(null);
 					return;
 				}
 
@@ -620,7 +619,7 @@ public class HttpTaskFactory {
 					
 					
 				}catch (Exception e) {					
-					cb.onGetData(null);
+					e.printStackTrace();
 					return;
 				}	
 			} catch (UnknownHostException e) {

@@ -337,13 +337,13 @@ public class HomeFragment extends Fragment implements IHttpCallback,
 
 	@Override
 	public void onGetData(Object data) {
-		// TODO Auto-generated method stub
-		handler.sendMessage(handler.obtainMessage(1, data));
+		if (data != null) {
+			handler.sendMessage(handler.obtainMessage(1, data));
+		}
 	}
 
 	@Override
 	public void onError(Object reason) {
-		// TODO Auto-generated method stub
 		handler.sendMessage(handler.obtainMessage(-1, reason));
 	}
 

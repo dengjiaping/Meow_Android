@@ -4,29 +4,76 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color"
     android:orientation="vertical" >
-   <include 
-       layout="@layout/title_layout"
-       />
 
-    <TextView
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/default_white"
+        android:gravity="center_vertical"
+        android:paddingBottom="18dp"
         android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:text="@string/phone_number"
-        android:textColor="@color/text_essential"
-        android:textSize="14sp" />
+        android:paddingTop="17dp" >
 
-    <TextView
-        android:id="@+id/phone_num_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/default_white"
-        android:paddingBottom="10dp"
-        android:paddingLeft="15dp"
-        android:textColor="@color/red"
-        android:textSize="24sp" />
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:background="@drawable/default_avatar"
+            android:contentDescription="@string/empty" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp" >
+
+            <TextView
+                android:id="@+id/phone_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_essential"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_num_tv"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/name_ext"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/name"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/name"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:text="@string/id_card_ext"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/id_card_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name_tv"
+                android:layout_alignTop="@id/id_card"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -43,31 +90,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/default_white"
-        android:orientation="vertical"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp" >
+        android:orientation="vertical" >
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:paddingTop="11dp" >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/name"
+                android:text="@string/card_num"
                 android:textColor="@color/text_essential"
                 android:textSize="15sp" />
 
             <EditText
-                android:singleLine="true"
-                android:id="@+id/name_et"
+                android:id="@+id/card_num_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
                 android:background="#00000000"
-                android:hint="@string/input_name"
+                android:hint="@string/input_card"
+                android:singleLine="true"
                 android:textColor="@color/text_essential"
                 android:textSize="15sp" />
         </FrameLayout>
@@ -75,28 +122,31 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:background="@color/line_gray" />
 
         <FrameLayout
-            android:id="@+id/id_card_layout"
+            android:id="@+id/opening_bank_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="11dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:paddingTop="11dp" >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/id_card_type"
+                android:text="@string/opening_bank"
                 android:textColor="@color/text_essential"
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/id_card_type_tv"
+                android:id="@+id/opening_bank_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
-                android:text="@string/id_card"
                 android:textColor="@color/text_essential"
                 android:textSize="15sp" />
 
@@ -107,43 +157,6 @@
                 android:contentDescription="@string/empty"
                 android:src="@drawable/navi_arrow" />
         </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/line_gray" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="11dp"
-            android:paddingTop="11dp" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/id_card_num"
-                android:textColor="@color/text_essential"
-                android:textSize="15sp" />
-
-            <EditText
-                android:singleLine="true"
-                android:id="@+id/id_card_num_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
-                android:background="#00000000"
-                android:hint="@string/input_id_card"
-                android:textColor="@color/text_essential"
-                android:textSize="15sp" />
-        </FrameLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/default_white"
-        android:orientation="vertical" >
 
         <View
             android:layout_width="match_parent"

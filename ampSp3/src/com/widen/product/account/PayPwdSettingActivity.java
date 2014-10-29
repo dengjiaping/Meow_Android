@@ -11,7 +11,7 @@ import com.widen.product.BaseActivity;
 
 public class PayPwdSettingActivity extends BaseActivity implements
 		OnClickListener {
-	
+
 	public static void startActivity(Activity activity) {
 		activity.startActivity(new Intent(activity, PayPwdSettingActivity.class));
 	}
@@ -31,7 +31,8 @@ public class PayPwdSettingActivity extends BaseActivity implements
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.commit_btn:
-			IdentityInfoActivity.startActivity(this);
+			IdentityInfoActivity.startActivity(this, "15800726687", true,
+					"wang", null, "1234567890-123");
 			break;
 		case R.id.back:
 			finish();

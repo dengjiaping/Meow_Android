@@ -23,7 +23,7 @@ public abstract class BaseActivity extends Activity {
 	protected ProgressDialog mProgressDialog = null;
 
 	protected void initSettings() {
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
 	}
 
 	@Override

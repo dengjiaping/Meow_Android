@@ -43,6 +43,7 @@
     <string name="phone_num">手机号码</string>
     <string name="phone_number">手机号码:</string>
     <string name="id_card">身份证</string>
+    <string name="id_card_ext">身份证:</string>
     <string name="expect_income">预期收益</string>
     <string name="input_fund">在投资金：%1$d元</string>
     <string name="obtain_income">已获收益：%1$d元</string>
@@ -57,11 +58,26 @@
     <string name="agree_and_commit">同意协议并提交</string>
     <string name="identity_info">身份信息</string>
     <string name="name">姓名</string>
+    <string name="name_ext">姓名:</string>
     <string name="input_name">请填写姓名</string>
     <string name="id_card_type">证件类型</string>
     <string name="passport">护照</string>
     <string name="military_card">军人证</string>
     <string name="id_card_num">证件号码</string>
+    <string name="input_id_card">请填写证件号码</string>
     <string name="next">下一步</string>
+    <string name="bind_card">绑定银行卡</string>
+    <string name="card_num">卡号</string>
+    <string name="input_card">请输入借记卡卡号</string>
+    <string name="opening_bank">开户银行</string>
+    <string name="veriry_wait">认证请求受理中</string>
+    <string name="call_verify">请接听来电 并确认密码</string>
+    <string name="verify_wait_01">这是确认您是卡主的必要安全措施</string>
+    <string name="verify_wait_02">若10分钟未接到来电即表示认证失败</string>
+    <string name="verify_wait_03">请在语音提示结束后再输入密码</string>
+    <string name="verify_wait_04">认证所扣费用成功后会归还至原卡</string>
+    <string name="look_and_wait">边逛边等</string>
+    <string name="question_consult">如有问题请垂询：</string>
+    <string name="jym_phone">4008&#8211;556&#8211;333</string>
 
 </resources>
