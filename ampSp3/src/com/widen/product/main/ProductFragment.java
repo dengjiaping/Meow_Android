@@ -21,8 +21,8 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.BaseListInfo;
-import com.widen.http.info.ProductionsInfo2;
+import com.widen.http.model.BaseListInfo;
+import com.widen.http.model.ProductionsInfo2;
 import com.widen.util.NetworkUtil;
 import com.widen.util.Util;
 import com.widen.util.ViewUtil;
@@ -165,7 +165,7 @@ public class ProductFragment extends Fragment implements IHttpCallback{
 					start = start + 1;
 					getData();
 				}else{
-					String Id = infos.get(arg2 - 1).Id;
+					String Id = infos.get(arg2 - 1).productNo;
 					Intent intent = new Intent(getActivity(),ProductDetailAct_.class);
 					intent.putExtra("Id", Id);
 					startActivity(intent);
@@ -194,7 +194,7 @@ public class ProductFragment extends Fragment implements IHttpCallback{
 			progressbar.setVisibility(View.VISIBLE);
 			flag = false;
 		}
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.PRODUCTS_LIST_NEW);
+		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.PRODUCTS_LIST_FORBA);
 		task.setParams(new String[]{start + ""});
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}

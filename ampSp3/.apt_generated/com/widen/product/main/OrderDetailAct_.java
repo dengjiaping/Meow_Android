@@ -73,39 +73,24 @@ public final class OrderDetailAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
-        Price = ((TextView) hasViews.findViewById(id.Price));
-        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
-        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
+        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
         Yield = ((TextView) hasViews.findViewById(id.Yield));
-        CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
-        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
-        Name = ((TextView) hasViews.findViewById(id.Name));
-        item_txt = ((TextView) hasViews.findViewById(id.item_txt));
+        BankName = ((TextView) hasViews.findViewById(id.BankName));
+        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
         SettleDay = ((TextView) hasViews.findViewById(id.SettleDay));
         Duration = ((TextView) hasViews.findViewById(id.Duration));
+        Name = ((TextView) hasViews.findViewById(id.Name));
+        item_txt = ((TextView) hasViews.findViewById(id.item_txt));
         no_use_item_lay = ((FrameLayout) hasViews.findViewById(id.no_use_item_lay));
-        BankName = ((TextView) hasViews.findViewById(id.BankName));
         OrderNo = ((TextView) hasViews.findViewById(id.OrderNo));
-        ProductIdentifier = ((TextView) hasViews.findViewById(id.ProductIdentifier));
-        used_item_lay = ((FrameLayout) hasViews.findViewById(id.used_item_lay));
-        SellingStatus = ((TextView) hasViews.findViewById(id.SellingStatus));
-        {
-            View view = hasViews.findViewById(id.back);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        OrderDetailAct_.this.back();
-                    }
-
-                }
-                );
-            }
-        }
+        Price = ((TextView) hasViews.findViewById(id.Price));
+        ExpectedPrice = ((TextView) hasViews.findViewById(id.ExpectedPrice));
+        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
+        ExtraInterest = ((TextView) hasViews.findViewById(id.ExtraInterest));
+        root_lay = ((ScrollView) hasViews.findViewById(id.root_lay));
+        progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        CreatedAt = ((TextView) hasViews.findViewById(id.CreatedAt));
         {
             View view = hasViews.findViewById(id.no_use_item_lay);
             if (view!= null) {
@@ -115,6 +100,21 @@ public final class OrderDetailAct_
                     @Override
                     public void onClick(View view) {
                         OrderDetailAct_.this.no_use_item_lay();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.back);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        OrderDetailAct_.this.back();
                     }
 
                 }

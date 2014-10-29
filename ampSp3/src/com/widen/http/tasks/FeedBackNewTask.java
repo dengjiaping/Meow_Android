@@ -6,13 +6,13 @@ import org.json.JSONObject;
 import com.widen.http.IHttpTask;
 import com.widen.util.Constant;
 
-public class FeedBackNewTask implements IHttpTask{
+public class FeedBackNewTask extends IHttpTask{
 
 	private String[] strs;
 	@Override
 	public String getSubUrl() {
 		// TODO Auto-generated method stub
-		return "Api/V1/meow/Feedbacks";
+		return "/Meow/Feedbacks";
 	}
 
 	@Override
@@ -29,8 +29,13 @@ public class FeedBackNewTask implements IHttpTask{
 
 	@Override
 	public String getParams() {
-		// TODO Auto-generated method stub
-		return String.format("Cellphone=%s&Content=%s",strs[0],strs[1]);
+		try{
+			JSONObject jobject = new JSONObject();
+			jobject.put("Content", strs[0]);
+			return jobject.toString();
+		}catch(Exception e){
+			return "";
+		}
 	}
 
 	@Override
@@ -51,16 +56,6 @@ public class FeedBackNewTask implements IHttpTask{
 		return null;
 	}
 
-	@Override
-	public boolean isNewApi() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public String getContentType() {
-		// TODO Auto-generated method stub
-		return "application/x-www-form-urlencoded; charset=utf-8";
-	}
+	
 
 }

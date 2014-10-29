@@ -28,9 +28,9 @@ public final class MyItemAct_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
-    public final static String FLAG_EXTRA = "flag";
-    public final static String ORDER_ID_EXTRA = "orderId";
     public final static String ORDER_TITLE_EXTRA = "orderTitle";
+    public final static String ORDER_ID_EXTRA = "orderId";
+    public final static String FLAG_EXTRA = "flag";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,8 +74,8 @@ public final class MyItemAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
         listview = ((ListView) hasViews.findViewById(id.listview));
         {
             View view = hasViews.findViewById(id.back);
@@ -98,14 +98,14 @@ public final class MyItemAct_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey(FLAG_EXTRA)) {
-                flag = extras_.getString(FLAG_EXTRA);
+            if (extras_.containsKey(ORDER_TITLE_EXTRA)) {
+                orderTitle = extras_.getString(ORDER_TITLE_EXTRA);
             }
             if (extras_.containsKey(ORDER_ID_EXTRA)) {
                 orderId = extras_.getString(ORDER_ID_EXTRA);
             }
-            if (extras_.containsKey(ORDER_TITLE_EXTRA)) {
-                orderTitle = extras_.getString(ORDER_TITLE_EXTRA);
+            if (extras_.containsKey(FLAG_EXTRA)) {
+                flag = extras_.getString(FLAG_EXTRA);
             }
         }
     }
@@ -158,8 +158,8 @@ public final class MyItemAct_
             }
         }
 
-        public MyItemAct_.IntentBuilder_ flag(String flag) {
-            intent_.putExtra(FLAG_EXTRA, flag);
+        public MyItemAct_.IntentBuilder_ orderTitle(String orderTitle) {
+            intent_.putExtra(ORDER_TITLE_EXTRA, orderTitle);
             return this;
         }
 
@@ -168,8 +168,8 @@ public final class MyItemAct_
             return this;
         }
 
-        public MyItemAct_.IntentBuilder_ orderTitle(String orderTitle) {
-            intent_.putExtra(ORDER_TITLE_EXTRA, orderTitle);
+        public MyItemAct_.IntentBuilder_ flag(String flag) {
+            intent_.putExtra(FLAG_EXTRA, flag);
             return this;
         }
 

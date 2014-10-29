@@ -81,18 +81,18 @@ public final class ProductItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        product_progressbar = ((ProgressBar) hasViews.findViewById(id.product_progressbar));
-        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
-        bank_txt = ((TextView) hasViews.findViewById(id.bank_txt));
         BankName = ((TextView) hasViews.findViewById(id.BankName));
-        Date = ((TextView) hasViews.findViewById(id.Date));
-        Yield = ((TextView) hasViews.findViewById(id.Yield));
-        Name = ((TextView) hasViews.findViewById(id.Name));
-        being = ((TextView) hasViews.findViewById(id.being));
-        product_progressbar_lay = ((FrameLayout) hasViews.findViewById(id.product_progressbar_lay));
+        bank_txt = ((TextView) hasViews.findViewById(id.bank_txt));
         SellingStatus = ((ImageView) hasViews.findViewById(id.SellingStatus));
-        Yield_txt = ((TextView) hasViews.findViewById(id.Yield_txt));
         Duration = ((TextView) hasViews.findViewById(id.Duration));
+        Yield = ((TextView) hasViews.findViewById(id.Yield));
+        TotalNumber = ((TextView) hasViews.findViewById(id.TotalNumber));
+        Name = ((TextView) hasViews.findViewById(id.Name));
+        product_progressbar = ((ProgressBar) hasViews.findViewById(id.product_progressbar));
+        Date = ((TextView) hasViews.findViewById(id.Date));
+        Yield_txt = ((TextView) hasViews.findViewById(id.Yield_txt));
+        product_progressbar_lay = ((FrameLayout) hasViews.findViewById(id.product_progressbar_lay));
+        being = ((TextView) hasViews.findViewById(id.being));
     }
 
 }

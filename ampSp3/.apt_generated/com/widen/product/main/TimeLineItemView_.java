@@ -81,21 +81,21 @@ public final class TimeLineItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        month = ((TextView) hasViews.findViewById(id.month));
         timeline_color_line = ((ImageView) hasViews.findViewById(id.timeline_color_line));
+        month_lay = ((FrameLayout) hasViews.findViewById(id.month_lay));
         year_lay = ((FrameLayout) hasViews.findViewById(id.year_lay));
+        month = ((TextView) hasViews.findViewById(id.month));
+        type_icon = ((ImageView) hasViews.findViewById(id.type_icon));
+        day_lay = ((LinearLayout) hasViews.findViewById(id.day_lay));
+        year = ((TextView) hasViews.findViewById(id.year));
+        txt_1 = ((TextView) hasViews.findViewById(id.txt_1));
+        name = ((TextView) hasViews.findViewById(id.name));
+        finall_lay = ((FrameLayout) hasViews.findViewById(id.finall_lay));
+        txt_2 = ((TextView) hasViews.findViewById(id.txt_2));
+        today_txt = ((TextView) hasViews.findViewById(id.today_txt));
         type_40_txt = ((TextView) hasViews.findViewById(id.type_40_txt));
         day = ((TextView) hasViews.findViewById(id.day));
-        name = ((TextView) hasViews.findViewById(id.name));
-        txt_1 = ((TextView) hasViews.findViewById(id.txt_1));
         navi_arrow = ((ImageView) hasViews.findViewById(id.navi_arrow));
-        today_txt = ((TextView) hasViews.findViewById(id.today_txt));
-        finall_lay = ((FrameLayout) hasViews.findViewById(id.finall_lay));
-        type_icon = ((ImageView) hasViews.findViewById(id.type_icon));
-        txt_2 = ((TextView) hasViews.findViewById(id.txt_2));
-        day_lay = ((LinearLayout) hasViews.findViewById(id.day_lay));
-        month_lay = ((FrameLayout) hasViews.findViewById(id.month_lay));
-        year = ((TextView) hasViews.findViewById(id.year));
     }
 
 }

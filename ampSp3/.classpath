@@ -10,6 +10,8 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/umeng/umeng_sdk_201312301505_analytics/libs/umeng_sdk.jar"/>
+	<classpathentry kind="lib" path="libs/umeng-analytics-v5.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/androidannotations-api-3.0.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ShareSDK"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

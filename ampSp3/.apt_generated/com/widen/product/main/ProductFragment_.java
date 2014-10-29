@@ -65,9 +65,9 @@ public final class ProductFragment_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        text_top = ((TextView) hasViews.findViewById(com.widen.R.id.text_top));
         progressbar = ((ProgressBar) hasViews.findViewById(com.widen.R.id.progressbar));
         listview = ((AppendList) hasViews.findViewById(com.widen.R.id.listview));
-        text_top = ((TextView) hasViews.findViewById(com.widen.R.id.text_top));
         afterViews();
     }
 

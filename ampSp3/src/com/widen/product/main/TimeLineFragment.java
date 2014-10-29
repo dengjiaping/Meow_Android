@@ -30,8 +30,8 @@ import com.widen.application.MyApplication;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.BaseListInfo;
-import com.widen.http.info.TimeLineInfo;
+import com.widen.http.model.BaseListInfo;
+import com.widen.http.model.TimeLineInfo;
 import com.widen.widget.XListView;
 import com.widen.widget.XListView.IXListViewListener;
 
@@ -149,85 +149,85 @@ public class TimeLineFragment extends Fragment implements IHttpCallback,
 	private void upData() {
 		// xListView.setPullUp(false);
 
-		if (!isGettingData) {
-			isGettingData = true;
-			IHttpTask task = HttpTaskFactory.getFactory().createTask(
-					HttpTaskFactory.TIMELINE_ITEM);
-			task.setParams(new String[] { start + "", timestamp });
-			HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-
-				@Override
-				public void onGetData(Object data) {
-					// TODO Auto-generated method stub
-
-					BaseListInfo<TimeLineInfo> list = (BaseListInfo<TimeLineInfo>) data;
-
-					String Updated = (String) list.getExtraData("Updated");
-
-					if (Updated.equals("false")) {
-
-						if ((Integer) list.getExtraData("today") != null) {
-
-							i = (Integer) list.getExtraData("today");
-						}
-
-						top = (String) list.getExtraData("top");
-
-						start = start - list.size();
-
-						// handler.sendEmptyMessage(2);
-						handler.sendMessage(handler.obtainMessage(2, list));
-					} else {
-
-						handler.sendMessage(handler.obtainMessage(31, data));
-
-					}
-
-				}
-
-				@Override
-				public void onError(Object reason) {
-					// TODO Auto-generated method stub
-					handler.sendMessage(handler.obtainMessage(-2, reason));
-				}
-			}, task);
-		}
+//		if (!isGettingData) {
+//			isGettingData = true;
+//			IHttpTask task = HttpTaskFactory.getFactory().createTask(
+//					HttpTaskFactory.TIMELINE_ITEM);
+//			task.setParams(new String[] { start + "", timestamp });
+//			HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//
+//				@Override
+//				public void onGetData(Object data) {
+//					// TODO Auto-generated method stub
+//
+//					BaseListInfo<TimeLineInfo> list = (BaseListInfo<TimeLineInfo>) data;
+//
+//					String Updated = (String) list.getExtraData("Updated");
+//
+//					if (Updated.equals("false")) {
+//
+//						if ((Integer) list.getExtraData("today") != null) {
+//
+//							i = (Integer) list.getExtraData("today");
+//						}
+//
+//						top = (String) list.getExtraData("top");
+//
+//						start = start - list.size();
+//
+//						// handler.sendEmptyMessage(2);
+//						handler.sendMessage(handler.obtainMessage(2, list));
+//					} else {
+//
+//						handler.sendMessage(handler.obtainMessage(31, data));
+//
+//					}
+//
+//				}
+//
+//				@Override
+//				public void onError(Object reason) {
+//					// TODO Auto-generated method stub
+//					handler.sendMessage(handler.obtainMessage(-2, reason));
+//				}
+//			}, task);
+//		}
 	}
 
 	private void downData() {
 	
-		if (!isGettingData) {
-			isGettingData = true;
-			IHttpTask task = HttpTaskFactory.getFactory().createTask(
-					HttpTaskFactory.TIMELINE_ITEM);
-			task.setParams(new String[] { end + "", timestamp });
-			HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-
-				@Override
-				public void onGetData(Object data) {
-					// TODO Auto-generated method stub
-
-					BaseListInfo<TimeLineInfo> list = (BaseListInfo<TimeLineInfo>) data;
-					// timestamp = (String) list.getExtraData("Timestamp");
-					String Updated = (String) list.getExtraData("Updated");
-					if (Updated.equals("false")) {
-						bottom = (String) list.getExtraData("bottom");
-						end = end + list.size();
-
-						// handler.sendEmptyMessage(3);
-						handler.sendMessage(handler.obtainMessage(3, list));
-					} else {
-						handler.sendMessage(handler.obtainMessage(31, data));
-					}
-				}
-
-				@Override
-				public void onError(Object reason) {
-					// TODO Auto-generated method stub
-					handler.sendMessage(handler.obtainMessage(-3, reason));
-				}
-			}, task);
-		}
+//		if (!isGettingData) {
+//			isGettingData = true;
+//			IHttpTask task = HttpTaskFactory.getFactory().createTask(
+//					HttpTaskFactory.TIMELINE_ITEM);
+//			task.setParams(new String[] { end + "", timestamp });
+//			HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//
+//				@Override
+//				public void onGetData(Object data) {
+//					// TODO Auto-generated method stub
+//
+//					BaseListInfo<TimeLineInfo> list = (BaseListInfo<TimeLineInfo>) data;
+//					// timestamp = (String) list.getExtraData("Timestamp");
+//					String Updated = (String) list.getExtraData("Updated");
+//					if (Updated.equals("false")) {
+//						bottom = (String) list.getExtraData("bottom");
+//						end = end + list.size();
+//
+//						// handler.sendEmptyMessage(3);
+//						handler.sendMessage(handler.obtainMessage(3, list));
+//					} else {
+//						handler.sendMessage(handler.obtainMessage(31, data));
+//					}
+//				}
+//
+//				@Override
+//				public void onError(Object reason) {
+//					// TODO Auto-generated method stub
+//					handler.sendMessage(handler.obtainMessage(-3, reason));
+//				}
+//			}, task);
+//		}
 	}
 
 	@Click
@@ -238,15 +238,15 @@ public class TimeLineFragment extends Fragment implements IHttpCallback,
 	}
 
 	private void getData() {
-		if (!isGettingData) {
-			isGettingData = true;
-			login_lay.setVisibility(View.GONE);
-			progressbar.setVisibility(View.VISIBLE);
-			IHttpTask task = HttpTaskFactory.getFactory().createTask(
-					HttpTaskFactory.TIMELINE_CURRENT);
-			task.setParams(new String[] { "10" });
-			HttpTaskFactory.getFactory().sendRequest(this, task);
-		}
+//		if (!isGettingData) {
+//			isGettingData = true;
+//			login_lay.setVisibility(View.GONE);
+//			progressbar.setVisibility(View.VISIBLE);
+//			IHttpTask task = HttpTaskFactory.getFactory().createTask(
+//					HttpTaskFactory.TIMELINE_CURRENT);
+//			task.setParams(new String[] { "10" });
+//			HttpTaskFactory.getFactory().sendRequest(this, task);
+//		}
 		/*
 		 * IHttpTask task =
 		 * HttpTaskFactory.getFactory().createTask(HttpTaskFactory

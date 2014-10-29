@@ -20,7 +20,7 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.OrderInfo;
+import com.widen.http.model.OrderInfo;
 import com.widen.product.BaseActivity;
 import com.widen.util.Util;
 @EActivity(R.layout.order_detail)
@@ -103,7 +103,7 @@ public class OrderDetailAct extends BaseActivity implements IHttpCallback{
 	
 	private void getData(){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERINFO);
+		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERDETAIL);
 		task.setParams(new String[]{Id});		
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}

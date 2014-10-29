@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.widen.R;
-import com.widen.http.info.OrderInfo;
+import com.widen.http.model.OrderInfo;
 @EViewGroup(R.layout.order_item)
 public class OrderItemView extends LinearLayout{
 
@@ -68,7 +68,7 @@ public class OrderItemView extends LinearLayout{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent  = new Intent(context, MyItemAct_.class);
-				intent.putExtra("orderId", info.Id);
+				intent.putExtra("orderId", info.OrderIdentifier);
 				intent.putExtra("flag", OrderListAct.FLAG);
 				context.startActivity(intent);
 			}

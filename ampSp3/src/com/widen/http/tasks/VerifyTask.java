@@ -4,17 +4,17 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.widen.http.IHttpTask;
-import com.widen.http.info.VerifyInfo;
+import com.widen.http.model.VerifyInfo;
 import com.widen.util.Constant;
 import com.widen.util.Util;
 
-public class VerifyTask implements IHttpTask{
+public class VerifyTask extends IHttpTask{
 
 	private String[] strs;
 	@Override
 	public String getSubUrl() {
 		// TODO Auto-generated method stub
-		return "Api/V1/Verification/VerifyCode";
+		return "/VeriCodes/Verify";
 	}
 
 	@Override
@@ -31,8 +31,17 @@ public class VerifyTask implements IHttpTask{
 
 	@Override
 	public String getParams() {
-		// TODO Auto-generated method stub
-		return String.format("Type=%s&Cellphone=%s&Code=%s",strs[0],strs[1],strs[2]);
+		try{
+		
+			JSONObject jobject = new JSONObject();
+			jobject.put("Type", strs[0]);
+			jobject.put("Cellphone", strs[1]);
+			jobject.put("Code", strs[2]);
+			return jobject.toString();
+		
+		}catch(Exception e){
+			return "";
+		}
 	}
 
 	@Override
@@ -47,7 +56,7 @@ public class VerifyTask implements IHttpTask{
 		VerifyInfo info = new VerifyInfo();
 		info.Successful = Util.getJsonBoolean(obj, "Successful");
 		info.Token = Util.getJsonString(obj, "Token");
-		
+		info.remainCount = Util.getJsonInt(obj, "RemainCount");
 		return info;
 	}
 
@@ -57,16 +66,6 @@ public class VerifyTask implements IHttpTask{
 		return null;
 	}
 
-	@Override
-	public boolean isNewApi() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public String getContentType() {
-		// TODO Auto-generated method stub
-		return "application/x-www-form-urlencoded; charset=utf-8";
-	}
+	
 
 }

@@ -7,13 +7,14 @@ import com.widen.http.IHttpTask;
 import com.widen.util.Constant;
 import com.widen.util.Util;
 
-public class CheckNameUniqTask implements IHttpTask{
+public class CheckNameUniqTask extends IHttpTask{
 
 	private String[] strs;
+	
 	@Override
 	public String getSubUrl() {
-		// TODO Auto-generated method stub
-		return "Api/V1/Passport/Auth/CheckCellphone";
+		// 
+		return "/User/CheckCellphone";
 	}
 
 	@Override
@@ -52,16 +53,6 @@ public class CheckNameUniqTask implements IHttpTask{
 		return null;
 	}
 
-	@Override
-	public boolean isNewApi() {
-		// TODO Auto-generated method stub
-		return true;
-	}
 
-	@Override
-	public String getContentType() {
-		// TODO Auto-generated method stub
-		return "application/x-www-form-urlencoded; charset=utf-8";
-	}
 
 }

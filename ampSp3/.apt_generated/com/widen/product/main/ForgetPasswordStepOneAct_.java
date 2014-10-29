@@ -70,25 +70,10 @@ public final class ForgetPasswordStepOneAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        phone = ((EditText) hasViews.findViewById(id.phone));
-        sub = ((Button) hasViews.findViewById(id.sub));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
         back = ((Button) hasViews.findViewById(id.back));
-        {
-            View view = hasViews.findViewById(id.back);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        ForgetPasswordStepOneAct_.this.back();
-                    }
-
-                }
-                );
-            }
-        }
+        phone = ((EditText) hasViews.findViewById(id.phone));
+        sub = ((Button) hasViews.findViewById(id.sub));
         {
             View view = hasViews.findViewById(id.sub);
             if (view!= null) {
@@ -98,6 +83,21 @@ public final class ForgetPasswordStepOneAct_
                     @Override
                     public void onClick(View view) {
                         ForgetPasswordStepOneAct_.this.sub();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.back);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        ForgetPasswordStepOneAct_.this.back();
                     }
 
                 }

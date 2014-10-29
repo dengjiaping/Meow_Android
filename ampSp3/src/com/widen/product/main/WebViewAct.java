@@ -43,7 +43,7 @@ public class WebViewAct extends BaseActivity{
 	
 	@ViewById
 	WebView webview;	
-	String url = HttpConfig.URL_SERVER_NEW_API + "app/share.cshtml";
+	String url = HttpConfig.CURRENT_HOST + "app/share.cshtml";
 	@Click
 	public void back(){
 		finish();

@@ -72,27 +72,12 @@ public final class LoginAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        error_txt = ((TextView) hasViews.findViewById(id.error_txt));
-        password = ((EditText) hasViews.findViewById(id.password));
         error_lay = ((FrameLayout) hasViews.findViewById(id.error_lay));
+        password = ((EditText) hasViews.findViewById(id.password));
+        error_txt = ((TextView) hasViews.findViewById(id.error_txt));
         forget_icon = ((ImageView) hasViews.findViewById(id.forget_icon));
-        phone = ((EditText) hasViews.findViewById(id.phone));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
-        {
-            View view = hasViews.findViewById(id.forget_icon);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        LoginAct_.this.forget_icon();
-                    }
-
-                }
-                );
-            }
-        }
+        phone = ((EditText) hasViews.findViewById(id.phone));
         {
             View view = hasViews.findViewById(id.register);
             if (view!= null) {
@@ -109,21 +94,6 @@ public final class LoginAct_
             }
         }
         {
-            View view = hasViews.findViewById(id.login);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        LoginAct_.this.login();
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -132,6 +102,36 @@ public final class LoginAct_
                     @Override
                     public void onClick(View view) {
                         LoginAct_.this.back();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.forget_icon);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        LoginAct_.this.forget_icon();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.login);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        LoginAct_.this.login();
                     }
 
                 }

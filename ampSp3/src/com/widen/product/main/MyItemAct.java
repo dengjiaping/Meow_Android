@@ -30,9 +30,9 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.BaseListInfo;
-import com.widen.http.info.ItemInfo;
-import com.widen.http.info.OrderInfo;
+import com.widen.http.model.BaseListInfo;
+import com.widen.http.model.ItemInfo;
+import com.widen.http.model.OrderInfo;
 import com.widen.product.BaseActivity;
 import com.widen.util.ViewUtil;
 import com.widen.widget.URLImageView;
@@ -138,23 +138,23 @@ public class MyItemAct extends BaseActivity implements IHttpCallback{
 	
 	private void getUseItemData(String ItemId , String OrderId){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS_CONSUMEBYORDER);
-		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
-		task.setParams(new String[]{ItemId , OrderId});
-		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-			
-			@Override
-			public void onGetData(Object data) {
-				// TODO Auto-generated method stub
-				handler.sendMessage(handler.obtainMessage(2, data));
-			}
-			
-			@Override
-			public void onError(Object reason) {
-				// TODO Auto-generated method stub
-				handler.sendMessage(handler.obtainMessage(-2, reason));
-			}
-		}, task);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS_CONSUMEBYORDER);
+//		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
+//		task.setParams(new String[]{ItemId , OrderId});
+//		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//			
+//			@Override
+//			public void onGetData(Object data) {
+//				// TODO Auto-generated method stub
+//				handler.sendMessage(handler.obtainMessage(2, data));
+//			}
+//			
+//			@Override
+//			public void onError(Object reason) {
+//				// TODO Auto-generated method stub
+//				handler.sendMessage(handler.obtainMessage(-2, reason));
+//			}
+//		}, task);
 	}
 	
 	@Click
@@ -164,41 +164,41 @@ public class MyItemAct extends BaseActivity implements IHttpCallback{
 	
 	private void getDataForMyItem(){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS);
-		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
-		task.setParams(new String[]{start + ""});
-		HttpTaskFactory.getFactory().sendRequest(this, task);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS);
+//		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
+//		task.setParams(new String[]{start + ""});
+//		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 	
 	
 	private void getDataForOrder(){		
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS_USEABLE);
-		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
-		task.setParams(new String[]{orderId,start + ""});
-		HttpTaskFactory.getFactory().sendRequest(this, task);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEMS_USEABLE);
+//		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
+//		task.setParams(new String[]{orderId,start + ""});
+//		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 	
 	
 	private void getDeleteItem(String id){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEM_REMOVE);
-		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
-		task.setParams(new String[]{id});
-		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-			
-			@Override
-			public void onGetData(Object data) {
-				// TODO Auto-generated method stub
-				handler.sendEmptyMessage(5);
-			}
-			
-			@Override
-			public void onError(Object reason) {
-				// TODO Auto-generated method stub
-				handler.sendEmptyMessage(-5);
-			}
-		}, task);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ITEM_REMOVE);
+//		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
+//		task.setParams(new String[]{id});
+//		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//			
+//			@Override
+//			public void onGetData(Object data) {
+//				// TODO Auto-generated method stub
+//				handler.sendEmptyMessage(5);
+//			}
+//			
+//			@Override
+//			public void onError(Object reason) {
+//				// TODO Auto-generated method stub
+//				handler.sendEmptyMessage(-5);
+//			}
+//		}, task);
 	}
 	
 	private Dialog dialog;
@@ -317,22 +317,22 @@ public class MyItemAct extends BaseActivity implements IHttpCallback{
 	}
 	
 	private void getForItemData(String ItemId,String PageIndex){
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERS_FORITEM);
-		task.setParams(new String[]{ItemId,PageIndex});
-		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
-			
-			@Override
-			public void onGetData(Object data) {
-				// TODO Auto-generated method stub
-				handler.sendMessage(handler.obtainMessage(3, data));
-			}
-			
-			@Override
-			public void onError(Object reason) {
-				// TODO Auto-generated method stub
-				handler.sendMessage(handler.obtainMessage(-3, reason));
-			}
-		}, task);
+//		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.ORDERS_FORITEM);
+//		task.setParams(new String[]{ItemId,PageIndex});
+//		HttpTaskFactory.getFactory().sendRequest(new IHttpCallback() {
+//			
+//			@Override
+//			public void onGetData(Object data) {
+//				// TODO Auto-generated method stub
+//				handler.sendMessage(handler.obtainMessage(3, data));
+//			}
+//			
+//			@Override
+//			public void onError(Object reason) {
+//				// TODO Auto-generated method stub
+//				handler.sendMessage(handler.obtainMessage(-3, reason));
+//			}
+//		}, task);
 	}
 	
 	private Handler handler = new Handler(){

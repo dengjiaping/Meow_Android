@@ -74,21 +74,21 @@ public final class ForgetPasswordStepTwoAct_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        verification = ((EditText) hasViews.findViewById(id.verification));
+        sendverification_txt = ((TextView) hasViews.findViewById(id.sendverification_txt));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        sendverification_icon = ((ImageView) hasViews.findViewById(id.sendverification_icon));
         remind = ((TextView) hasViews.findViewById(id.remind));
         sendverification = ((Button) hasViews.findViewById(id.sendverification));
-        sendverification_txt = ((TextView) hasViews.findViewById(id.sendverification_txt));
-        sendverification_icon = ((ImageView) hasViews.findViewById(id.sendverification_icon));
-        verification = ((EditText) hasViews.findViewById(id.verification));
         {
-            View view = hasViews.findViewById(id.back);
+            View view = hasViews.findViewById(id.sub);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        ForgetPasswordStepTwoAct_.this.back();
+                        ForgetPasswordStepTwoAct_.this.sub();
                     }
 
                 }
@@ -111,14 +111,14 @@ public final class ForgetPasswordStepTwoAct_
             }
         }
         {
-            View view = hasViews.findViewById(id.sub);
+            View view = hasViews.findViewById(id.back);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        ForgetPasswordStepTwoAct_.this.sub();
+                        ForgetPasswordStepTwoAct_.this.back();
                     }
 
                 }

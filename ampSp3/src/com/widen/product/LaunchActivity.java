@@ -28,12 +28,12 @@ import com.umeng.analytics.MobclickAgent;
 import com.widen.R;
 import com.widen.application.MyApplication;
 import com.widen.db.Store;
-import com.widen.http.HttpClientFactory;
+
 import com.widen.http.HttpConfig;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.UpdateInfo;
+import com.widen.http.model.UpdateInfo;
 import com.widen.product.main.FirstBannerAct_;
 import com.widen.product.main.MainAct;
 import com.widen.product.main.MainAct_;
@@ -49,7 +49,7 @@ public class LaunchActivity extends Activity implements IHttpCallback,
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		ShareSDK.initSDK(this);
+		//ShareSDK.initSDK(this);
 		MobclickAgent.openActivityDurationTrack(false);
 		MobclickAgent.updateOnlineConfig(this);
 		MobclickAgent.setDebugMode(true);

@@ -19,9 +19,9 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import com.widen.R.id;
 import com.widen.R.layout;
-import com.widen.http.info.BaseListInfo;
-import com.widen.http.info.ItemInfo;
-import com.widen.http.info.OrderInfo;
+import com.widen.http.model.BaseListInfo;
+import com.widen.http.model.ItemInfo;
+import com.widen.http.model.OrderInfo;
 import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
@@ -32,9 +32,9 @@ public final class OrderListAct_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
+    public final static String ITEM_INFO_EXTRA = "itemInfo";
     public final static String FLAG_EXTRA = "flag";
     public final static String INFOS_EXTRA = "info";
-    public final static String ITEM_INFO_EXTRA = "itemInfo";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,8 +79,8 @@ public final class OrderListAct_
     @Override
     public void onViewChanged(HasViews hasViews) {
         no_data_lay = ((LinearLayout) hasViews.findViewById(id.no_data_lay));
-        listview = ((ListView) hasViews.findViewById(id.listview));
         progressbar = ((ProgressBar) hasViews.findViewById(id.progressbar));
+        listview = ((ListView) hasViews.findViewById(id.listview));
         {
             View view = hasViews.findViewById(id.back);
             if (view!= null) {
@@ -103,14 +103,14 @@ public final class OrderListAct_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
+            if (extras_.containsKey(ITEM_INFO_EXTRA)) {
+                itemInfo = ((ItemInfo) extras_.getSerializable(ITEM_INFO_EXTRA));
+            }
             if (extras_.containsKey(FLAG_EXTRA)) {
                 flag = extras_.getString(FLAG_EXTRA);
             }
             if (extras_.containsKey(INFOS_EXTRA)) {
                 infos = ((BaseListInfo<OrderInfo> ) extras_.getSerializable(INFOS_EXTRA));
-            }
-            if (extras_.containsKey(ITEM_INFO_EXTRA)) {
-                itemInfo = ((ItemInfo) extras_.getSerializable(ITEM_INFO_EXTRA));
             }
         }
     }
@@ -163,6 +163,11 @@ public final class OrderListAct_
             }
         }
 
+        public OrderListAct_.IntentBuilder_ itemInfo(ItemInfo itemInfo) {
+            intent_.putExtra(ITEM_INFO_EXTRA, ((Serializable) itemInfo));
+            return this;
+        }
+
         public OrderListAct_.IntentBuilder_ flag(String flag) {
             intent_.putExtra(FLAG_EXTRA, flag);
             return this;
@@ -170,11 +175,6 @@ public final class OrderListAct_
 
         public OrderListAct_.IntentBuilder_ infos(BaseListInfo<OrderInfo> infos) {
             intent_.putExtra(INFOS_EXTRA, ((Serializable) infos));
-            return this;
-        }
-
-        public OrderListAct_.IntentBuilder_ itemInfo(ItemInfo itemInfo) {
-            intent_.putExtra(ITEM_INFO_EXTRA, ((Serializable) itemInfo));
             return this;
         }
 

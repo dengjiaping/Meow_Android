@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.widen.R;
 import com.widen.application.MyApplication;
-import com.widen.http.info.ItemInfo;
+import com.widen.http.model.ItemInfo;
 import com.widen.widget.URLImageView;
 @EViewGroup(R.layout.item_item)
 public class ItemItemView  extends LinearLayout{

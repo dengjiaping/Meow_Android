@@ -25,7 +25,7 @@ import com.widen.db.Store;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.SignInfo;
+import com.widen.http.model.SignInfo;
 import com.widen.product.BaseActivity;
 @EActivity(R.layout.login)
 public class LoginAct extends BaseActivity implements IHttpCallback{

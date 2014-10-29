@@ -32,7 +32,7 @@ import com.widen.R;
 import com.widen.http.HttpTaskFactory;
 import com.widen.http.IHttpCallback;
 import com.widen.http.IHttpTask;
-import com.widen.http.info.ProductionsInfo2;
+import com.widen.http.model.ProductionsInfo2;
 import com.widen.product.BaseActivity;
 import com.widen.util.Util;
 @EActivity(R.layout.product_detail)
@@ -173,32 +173,32 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 	}
 	
 	private void initView(){
-		Name.setText(info.Name);
+		Name.setText(info.productName);
 		
-		if(Util.isEmpty(info.ExtraYield)){
-			Yield.setText(info.Yield);
+		if(0 == info.ExtraYield){
+			Yield.setText(info.yield + "");
 			ExtraYield.setText("%");
 		}else{
-			Yield.setText(info.Yield);
+			Yield.setText(info.yield + "");
 			ExtraYield.setText("%+" + info.ExtraYield + "%");
 		}
 		
-		if(info.IsRecommand.equals("0")){
-			yield_star_icon.setVisibility(View.INVISIBLE);
-		}else{
-			yield_star_icon.setVisibility(View.VISIBLE);
-		}
+//		if(info.IsRecommand.equals("0")){
+//			yield_star_icon.setVisibility(View.INVISIBLE);
+//		}else{
+//			yield_star_icon.setVisibility(View.VISIBLE);
+//		}
 		
-		Duration.setText(info.Duration + " 天");
-		Unit_txt.setText(info.begin + "元起投");
-		TotalNumber.setText(info.TotalNumber + "元");
+		Duration.setText(info.period + " 天");
+		Unit_txt.setText(info.unitPrice + "元起投");
+		//TotalNumber.setText(info.TotalNumber + "元");
 		
-		ProductIdentifier.setText(info.ProductIdentifier);
-		switch (Integer.parseInt(info.SellingStatus)) {
+		ProductIdentifier.setText(info.productIdentifier);
+		switch (info.showingStatus) {
 		case 10:
 			SellingStatus_icon.setImageResource(R.drawable.product_wait_icon);
 			SellingStatus_txt.setVisibility(View.VISIBLE);
-			SellingStatus_txt.setText("发售日期: " + info.PubBegin);
+			SellingStatus_txt.setText("发售日期: " + info.startSellTime);
 			seekbar_blue.setVisibility(View.GONE);
 			seekbar_red.setVisibility(View.GONE);
 			cat_left_icon.setVisibility(View.VISIBLE);
@@ -215,7 +215,7 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 			
 			SellingStatus_icon.setImageResource(R.drawable.product_sale_icon);
 			SellingStatus_txt.setVisibility(View.VISIBLE);
-			SellingStatus_txt.setText("已售出:" + info.FundedPercentage + "%");
+			//SellingStatus_txt.setText("已售出:" + info.FundedPercentage + "%");
 			seekbar_blue.setVisibility(View.GONE);
 			seekbar_red.setVisibility(View.VISIBLE);
 			seekbar_red.setThumb(getResources().getDrawable(R.drawable.cat_progress_icon));
@@ -229,26 +229,26 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 			
 			SellingStatus.setText("抢购");
 			SellingStatus.setTextColor(getResources().getColor(R.color.red));
-			if(!Util.isEmpty(info.FundedPercentage)){
-				new Thread()
-				{
-					public void run()
-					{				
-											
-							 while(i<=Integer.parseInt(info.FundedPercentage))
-							{						 
-								handler.sendMessage(handler.obtainMessage(2, i));
-								i++;
-								try {
-									sleep(10);
-								} catch (InterruptedException e) {
-									// TODO 自动生成的 catch 块
-									e.printStackTrace();
-								}
-							}
-					}
-				}.start();
-			}
+//			if(!Util.isEmpty(info.FundedPercentage)){
+//				new Thread()
+//				{
+//					public void run()
+//					{				
+//											
+//							 while(i<=Integer.parseInt(info.FundedPercentage))
+//							{						 
+//								handler.sendMessage(handler.obtainMessage(2, i));
+//								i++;
+//								try {
+//									sleep(10);
+//								} catch (InterruptedException e) {
+//									// TODO 自动生成的 catch 块
+//									e.printStackTrace();
+//								}
+//							}
+//					}
+//				}.start();
+//			}
 			break;
 			
 		case 30:
@@ -270,10 +270,10 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 			
 		case 40:
 		case 50:
-			dayProgress = (int) (((double)getDaySub(info.PubBegin,info.Now )/getDaySub(info.PubBegin,info.DueDate )) * 100);
+			//dayProgress = (int) (((double)getDaySub(info.startSellTime,info.Now )/getDaySub(info.startSellTime,info.period )) * 100);
 			SellingStatus_icon.setImageResource(R.drawable.product_back_icon);
 			SellingStatus_txt.setVisibility(View.VISIBLE);
-			SellingStatus_txt.setText("距还款还有  " + (int)getDaySub(info.Now,info.DueDate ) + "天");
+			//SellingStatus_txt.setText("距还款还有  " + (int)getDaySub(info.Now,info.period ) + "天");
 			seekbar_blue.setVisibility(View.VISIBLE);
 			seekbar_red.setVisibility(View.GONE);			
 			cat_left_icon.setVisibility(View.GONE);
@@ -322,12 +322,12 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 		
 		
 		
-		Unit.setText(info.Unit + "元");
-		MinNumber.setText(info.MinNumber + "份");
-		MaxNumber.setText(info.MaxNumber + "份");
-		PubBegin.setText(info.PubBegin);		
-		PubEnd.setText(info.PubEnd);
-		SettleDay.setText(info.SettleDay);
+		Unit.setText(info.unitPrice + "元");
+		MinNumber.setText(info.minShareCount + "份");
+		MaxNumber.setText(info.maxShareCount + "份");
+		PubBegin.setText(info.startSellTime);		
+		PubEnd.setText(info.endSellTime);
+		SettleDay.setText(info.SettleDate);
 		//DueDate.setText(info.DueDate);
 
 
@@ -351,8 +351,8 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 				// TODO Auto-generated method stub
 					try{
 					int count_v = Integer.parseInt(s.toString().trim());
-					double p = Double.parseDouble(info.Yield) + Double.parseDouble(info.ExtraYield);
-					int duration = Integer.parseInt(info.Duration);
+					double p = info.yield + info.ExtraYield;
+					int duration = info.period;
 					double result = (count_v * p / 100 * duration)/360;		
 					BigDecimal a = new BigDecimal(result);
 					//income.setText(String.format("%.2f", result));
@@ -369,7 +369,7 @@ public class ProductDetailAct extends BaseActivity implements IHttpCallback{
 	
 	private void getData(){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.PRODUCTS_DETAIL_NEW);
+		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.PRODUCTS_DETAIL_FORBA);
 		//task.setParams(new String[]{(String) getIntent().getSerializableExtra("Id")});
 		task.setParams(new String[]{Id});//93
 		HttpTaskFactory.getFactory().sendRequest(this, task);

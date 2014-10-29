@@ -92,7 +92,7 @@ public class FeedbackAct extends BaseActivity implements IHttpCallback{
 	}
 	private void getData(){
 		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.FEED_BACK_NEW);
-		task.setParams(new String[]{title.getText().toString().trim(),content.getText().toString().trim()});
+		task.setParams(new String[]{/*title.getText().toString().trim(),*/content.getText().toString().trim()});
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
 	

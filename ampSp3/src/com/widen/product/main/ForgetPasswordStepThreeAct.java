@@ -82,7 +82,7 @@ public class ForgetPasswordStepThreeAct extends BaseActivity implements IHttpCal
 	
 	private void getData(){
 		progressbar.setVisibility(View.VISIBLE);
-		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.RESET_PASSWORD);
+		IHttpTask task = HttpTaskFactory.getFactory().createTask(HttpTaskFactory.RESET_LOGIN_PASSWORD);
 		task.setParams(new String[]{password.getText().toString().trim(),Token});
 		HttpTaskFactory.getFactory().sendRequest(this, task);
 	}
